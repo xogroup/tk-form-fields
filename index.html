@@ -1,0 +1,145 @@
+<!doctype html>
+<html>
+  <head>
+    <meta content="IE=edge" http-equiv="X-UA-Compatible">
+    <meta charset="utf-8">
+    <meta content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" name="viewport">
+
+    <!-- Use title if it's in the page YAML frontmatter -->
+    <title>TK Form Fields v0.0.1</title>
+
+    <link href="//static.xoedge.com/patterns/css/fonts.css" rel="stylesheet" />
+    <link href="//static.xoedge.com/patterns/css/tk-bootstrap.4.css?v=4.3.4" rel="stylesheet" />
+
+    <link href="/stylesheets/site.css" rel="stylesheet" />
+    <script src="/javascripts/all.js"></script>
+  </head>
+
+  <body class="index">
+    <div class="container-fluid">
+  <div class="row">
+
+    <form action="#0" class="col-md-4 col-md-offset-4">
+
+
+      <div class="row">
+        <div class="col-xs-6 p-r-1">
+          <input type="text" id="first_name" name="first_name" required placeholder=" " />
+          <label for="first_name">First Name</label>
+        </div>
+
+        <div class="col-xs-6 p-l-1">
+          <input type="text" id="last_name" name="last_name" required placeholder=" " />
+          <label for="last_name">Last Name</label>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-xs-12">
+          <input type="text" id="nickname" name="nickname" placeholder=" " />
+          <label for="nickname">Nickname</label>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-xs-12">
+          <input type="email" id="email" name="email" required placeholder=" " />
+          <label for="email">Email Address</label>
+          <div class="requirements">
+            Must be a valid email address.
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-xs-12">
+          <input type="password" id="password" name="password" required placeholder=" " pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,}" />
+          <label for="password">Password</label>
+          <div class="requirements">
+            Your password must be at least 6 characters as well as contain at least one uppercase, one lowercase, and one number.
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-xs-12">
+          <input type="tel" id="tel" name="tel" required placeholder=" " />
+          <label for="tel">Phone Number</label>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-xs-12">
+          <input type="number" id="guest_count" name="guest_count" placeholder=" " />
+          <label for="guest_count">Guest Count</label>
+        </div>
+      </div>
+
+      <!-- EXAMPLE MOBILE INPUT TYPES // NOT OPTIMIZED
+      <div class="row">
+        <div class="col-xs-12">
+          <input type="date" id="wedding_date" name="wedding_date" required placeholder=" " />
+          <label for="wedding_date">Wedding Date</label>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-xs-12">
+          <input type="datetime" id="engagement_date_time" name="engagement_date_time" required placeholder=" " />
+          <label for="engagement_date_time">Engagement Date and Time</label>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-xs-12">
+          <input type="month" id="birthday_month" name="birthday_month" required placeholder=" " />
+          <label for="birthday_month">Birthday Month</label>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-xs-12">
+          <input type="search" id="venue_search" name="venue_search" required placeholder=" " />
+          <label for="venue_search">Venue Search</label>
+        </div>
+      </div>
+
+-->
+
+      <div class="row">
+        <div class="col-xs-12">
+          <input type="url" id="ww_url" name="ww_url" required placeholder=" " />
+          <label for="ww_url">Wedding Website URL</label>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-xs-12">
+          <input type="text" id="hint" name="hint" disabled placeholder=" " />
+          <label for="nickname">Hint</label>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="textarea col-xs-12">
+          <label for="optional">Optional</label>
+
+          <textarea rows="5" id="optional" name="optional" placeholder="Example note: Hi! Thank you so much for inviting us to your wedding. See you soon!"></textarea>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="textarea col-xs-12">
+          <textarea rows="5" id="optional_2" name="optional_2" placeholder="Another really long note."></textarea>
+        </div>
+      </div>
+
+      <input class="col-xs-12" type="submit" value="Sign Up" />
+
+    </form>
+
+  </div>
+</div>
+
+  </body>
+</html>
