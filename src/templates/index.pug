@@ -1,0 +1,60 @@
+html
+  head
+    title= title
+    link(href="//static.xoedge.com/patterns/css/fonts.css", rel="stylesheet")
+    link(href="//static.xoedge.com/patterns/css/tk-bootstrap.4.css?v=4.3.4", rel="stylesheet")
+    link(href="index.css", rel="stylesheet")
+
+  body
+    .container-fluid
+      .row
+        form.col-md-4.col-md-offset-4.tk-form-fields(action='#0')
+          fieldset.row
+            .col-xs-6
+              input#first_name(type='text', name='first_name', required='', placeholder=' ')
+              label(for='first_name') First Name
+            .col-xs-6
+              input#last_name(type='text', name='last_name', required='', placeholder=' ')
+              label(for='last_name') Last Name
+          .row
+            fieldset.col-xs-12
+              input#nickname(type='text', name='nickname', placeholder=' ')
+              label(for='nickname') Nickname
+          .row
+            fieldset.col-xs-12
+              input#email(type='email', name='email', required='', placeholder=' ')
+              label(for='email') Email Address
+              .requirements
+                | Must be a valid email address.
+          .row
+            fieldset.col-xs-12
+              input#password(type='password', name='password', required='', placeholder=' ', pattern='(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,}')
+              label(for='password') Password
+              .requirements
+                | Your password must be at least 6 characters as well as contain at least one uppercase, one lowercase, and one number.
+          .row
+            fieldset.col-xs-12
+              input#tel(type='tel', name='tel', required='', placeholder=' ')
+              label(for='tel') Phone Number
+          .row
+            fieldset.col-xs-12
+              input#guest_count(type='number', name='guest_count', placeholder=' ')
+              label(for='guest_count') Guest Count
+          .row
+            fieldset.col-xs-12
+              input#ww_url(type='url', name='ww_url', required='', placeholder=' ')
+              label(for='ww_url') Wedding Website URL
+          .row
+            fieldset.col-xs-12
+              input#hint(type='text', name='hint', disabled='', placeholder=' ')
+              label(for='nickname') Hint
+          .row
+            fieldset.textarea-container.col-xs-12
+              label(for='optional') Optional
+              textarea#optional(rows='5', name='optional', placeholder='Example note: Hi! Thank you so much for inviting us to your wedding. See you soon!')
+          .row
+            fieldset.textarea-container.col-xs-12
+              textarea#optional_2(rows='5', name='optional_2', placeholder='Another really long note.')
+          .row
+            button.col-xs-12(type='submit') Sign Up
+

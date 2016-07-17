@@ -1,0 +1,16 @@
+.tk-form-fields {
+  button,
+  [type="submit"] {
+    background: $coral;
+    border: $border-reset;
+    border-radius: $small-border-radius;
+    color: $white;
+    display: block;
+    font-size: $font-size-normal;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+    line-height: 18px;
+    margin: $spacer-x 0;
+    padding: 15px 0;
+  }
+}

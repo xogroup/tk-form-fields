@@ -1,0 +1,12 @@
+@charset "utf-8";
+@import "variables";
+
+body {
+  background: $white;
+  font-family: $sans-serif;
+  padding: 20px;
+}
+
+* {
+  box-sizing: border-box;
+}

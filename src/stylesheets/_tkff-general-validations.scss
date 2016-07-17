@@ -1,0 +1,12 @@
+.tk-form-fields {
+  .requirements {
+    background-color: $coral-darker;
+    color: $white;
+    font-size: $font-size-small;
+    font-weight: 500;
+    max-height: 0;
+    overflow: hidden;
+    padding: 0 $spacer-x;
+    transition: all 0.2s ease-out 1.5s;
+  }
+}

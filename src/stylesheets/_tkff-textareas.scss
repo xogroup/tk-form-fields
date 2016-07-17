@@ -1,0 +1,48 @@
+@mixin placeholder {
+  color: $gray-4;
+  font-size: $font-size-medium;
+  font-weight: 300;
+}
+
+// text area
+.textarea-container {
+  label {
+    color: $gray-4;
+    font-size: $spacer-x;
+    font-weight: 500;
+    height: 30px;
+    left: 20px;
+    position: absolute;
+    top: 6px;
+  }
+  label + textarea {
+    padding: 25px $spacer-x 4px;
+  }
+  textarea {
+    -webkit-appearance: none;
+    background: $gray-2;
+    border: $gray-2-border;
+    border-radius: $radius-reset;
+    color: $black;
+    font-size: $font-size-medium;
+    font-weight: 400;
+    outline: $outline-reset;
+    padding: 14px $spacer-x 4px;
+    resize: none;
+    width: 100%;
+
+    &:focus {
+      border: $black-border;
+      outline: $outline-reset;
+    }
+    &::-moz-placeholder {
+      @include placeholder;
+    }
+    &:-ms-input-placeholder {
+      @include placeholder;
+    }
+    &::-webkit-input-placeholder {
+      @include placeholder;
+    }
+  }
+}
