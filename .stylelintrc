@@ -1,0 +1,21 @@
+{
+  "plugins": [
+    "stylelint-scss", "stylelint-declaration-use-variable"
+  ],
+  "extends": "stylelint-config-standard",
+  "rules": {
+    "color-hex-case": "lower",
+    "declaration-block-no-duplicate-properties": [ true, { ignore: ["consecutive-duplicates"] } ],
+    "declaration-block-properties-order": "alphabetical",
+    "max-nesting-depth": 2,
+    "selector-max-compound-selectors": 3,
+    "selector-no-id": true,
+    "selector-no-qualifying-type": true,
+    "scss/at-extend-no-missing-placeholder": true,
+    "scss/at-import-partial-extension-blacklist": ["scss","sass","css"],
+    "scss/at-import-no-partial-leading-underscore": true,
+    "scss/at-mixin-no-argumentless-call-parentheses": true,
+    "scss/selector-no-redundant-nesting-selector": true,
+    "sh-waqar/declaration-use-variable": ["/color|background-color|border|outline|font-size|font-family/"],
+  }
+}

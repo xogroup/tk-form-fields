@@ -1,0 +1,11 @@
+@charset "utf-8";
+
+// don't know if this comes with bootstrap but it should
+.p-l-1 {
+  margin-left: ( $spacer-x * -0.5) !important;
+  padding-right: ( $spacer-x * 0.5) !important;
+}
+
+.p-r-1 {
+  padding-right: ( $spacer-x * 0.5) !important;
+}
