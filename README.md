@@ -1,5 +1,7 @@
 # The Knot Form Fields
 
+[![CircleCI](https://circleci.com/gh/xogroup/tk-form-fields/tree/master.svg?style=svg)](https://circleci.com/gh/xogroup/tk-form-fields/tree/master)
+
 ## Description
 
 This is HTML and styles to render the form fields pattern, as designed by [Silvia
