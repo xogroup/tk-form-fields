@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "build": "node build.js",
-    "build-docs": "rm public/* && node build_docs",
+    "build-docs": "node build_docs",
     "start": "node index.js",
     "test": "./test.sh"
   },

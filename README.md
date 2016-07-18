@@ -6,6 +6,8 @@ This is HTML and styles to render the form fields pattern, as designed by [Silvi
 Tueros-Cossio](mailto:stueros-cossio@xogrp.com). It's essentially a refactor and
 repository-fying version of [her Codepen](https://codepen.io/silviatc/pen/OXpMKL).
 
+[Demo here!](https://xogroup.github.io/tk-form-fields/)
+
 ## Usage
 
 Grab the latest file in this repo's `bin/` folder, and dump it into your app's
