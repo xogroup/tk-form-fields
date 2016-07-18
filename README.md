@@ -1,6 +1,6 @@
 # The Knot Form Fields
 
-[![CircleCI](https://circleci.com/gh/xogroup/tk-form-fields/tree/master.svg?style=svg)](https://circleci.com/gh/xogroup/tk-form-fields/tree/master)
+[![CircleCI](https://circleci.com/gh/xogroup/tk-form-fields/tree/master.svg?style=svg&circle-token=0fd29ea3e7db76a56de7fab2af9edce25facc2f1)](https://circleci.com/gh/xogroup/tk-form-fields/tree/master)
 
 ## Description
 
