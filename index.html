@@ -1,144 +1,140 @@
-<!doctype html>
-<html>
-  <head>
-    <meta content="IE=edge" http-equiv="X-UA-Compatible">
-    <meta charset="utf-8">
-    <meta content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" name="viewport">
-
-    <!-- Use title if it's in the page YAML frontmatter -->
-    <title>TK Form Fields v0.0.1</title>
-
-    <link href="//static.xoedge.com/patterns/css/fonts.css" rel="stylesheet" />
-    <link href="//static.xoedge.com/patterns/css/tk-bootstrap.4.css?v=4.3.4" rel="stylesheet" />
-
-    <link href="/tk-form-fields/stylesheets/site.css" rel="stylesheet" />
-  </head>
-
-  <body class="index">
-    <div class="container-fluid">
-  <div class="row">
-
-    <form action="#0" class="col-md-4 col-md-offset-4">
-
-
-      <div class="row">
-        <div class="col-xs-6 p-r-1">
-          <input type="text" id="first_name" name="first_name" required placeholder=" " />
-          <label for="first_name">First Name</label>
-        </div>
-
-        <div class="col-xs-6 p-l-1">
-          <input type="text" id="last_name" name="last_name" required placeholder=" " />
-          <label for="last_name">Last Name</label>
-        </div>
-      </div>
-
-      <div class="row">
-        <div class="col-xs-12">
-          <input type="text" id="nickname" name="nickname" placeholder=" " />
-          <label for="nickname">Nickname</label>
-        </div>
-      </div>
-
-      <div class="row">
-        <div class="col-xs-12">
-          <input type="email" id="email" name="email" required placeholder=" " />
-          <label for="email">Email Address</label>
-          <div class="requirements">
-            Must be a valid email address.
-          </div>
-        </div>
-      </div>
-
-      <div class="row">
-        <div class="col-xs-12">
-          <input type="password" id="password" name="password" required placeholder=" " pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,}" />
-          <label for="password">Password</label>
-          <div class="requirements">
-            Your password must be at least 6 characters as well as contain at least one uppercase, one lowercase, and one number.
-          </div>
-        </div>
-      </div>
-
-      <div class="row">
-        <div class="col-xs-12">
-          <input type="tel" id="tel" name="tel" required placeholder=" " />
-          <label for="tel">Phone Number</label>
-        </div>
-      </div>
-
-      <div class="row">
-        <div class="col-xs-12">
-          <input type="number" id="guest_count" name="guest_count" placeholder=" " />
-          <label for="guest_count">Guest Count</label>
-        </div>
-      </div>
-
-      <!-- EXAMPLE MOBILE INPUT TYPES // NOT OPTIMIZED
-      <div class="row">
-        <div class="col-xs-12">
-          <input type="date" id="wedding_date" name="wedding_date" required placeholder=" " />
-          <label for="wedding_date">Wedding Date</label>
-        </div>
-      </div>
-
-      <div class="row">
-        <div class="col-xs-12">
-          <input type="datetime" id="engagement_date_time" name="engagement_date_time" required placeholder=" " />
-          <label for="engagement_date_time">Engagement Date and Time</label>
-        </div>
-      </div>
-
-      <div class="row">
-        <div class="col-xs-12">
-          <input type="month" id="birthday_month" name="birthday_month" required placeholder=" " />
-          <label for="birthday_month">Birthday Month</label>
-        </div>
-      </div>
-
-      <div class="row">
-        <div class="col-xs-12">
-          <input type="search" id="venue_search" name="venue_search" required placeholder=" " />
-          <label for="venue_search">Venue Search</label>
-        </div>
-      </div>
-
--->
-
-      <div class="row">
-        <div class="col-xs-12">
-          <input type="url" id="ww_url" name="ww_url" required placeholder=" " />
-          <label for="ww_url">Wedding Website URL</label>
-        </div>
-      </div>
-
-      <div class="row">
-        <div class="col-xs-12">
-          <input type="text" id="hint" name="hint" disabled placeholder=" " />
-          <label for="nickname">Hint</label>
-        </div>
-      </div>
-
-      <div class="row">
-        <div class="textarea col-xs-12">
-          <label for="optional">Optional</label>
-
-          <textarea rows="5" id="optional" name="optional" placeholder="Example note: Hi! Thank you so much for inviting us to your wedding. See you soon!"></textarea>
-        </div>
-      </div>
-
-      <div class="row">
-        <div class="textarea col-xs-12">
-          <textarea rows="5" id="optional_2" name="optional_2" placeholder="Another really long note."></textarea>
-        </div>
-      </div>
-
-      <input class="col-xs-12" type="submit" value="Sign Up" />
-
-    </form>
-
-  </div>
-</div>
-
-  </body>
-</html>
+function template(locals) {var pug_html = "", pug_mixins = {}, pug_interp;var pug_debug_filename, pug_debug_line;try {;var locals_for_with = (locals || {});(function (title) {;pug_debug_line = 1;pug_debug_filename = "\u002FUsers\u002Fmcarag\u002Fsrc\u002Ftk-form-fields-pattern\u002Fsrc\u002Ftemplates\u002Findex.pug";
+pug_html = pug_html + "\u003Chtml\u003E";
+;pug_debug_line = 2;pug_debug_filename = "\u002FUsers\u002Fmcarag\u002Fsrc\u002Ftk-form-fields-pattern\u002Fsrc\u002Ftemplates\u002Findex.pug";
+pug_html = pug_html + "\u003Chead\u003E";
+;pug_debug_line = 3;pug_debug_filename = "\u002FUsers\u002Fmcarag\u002Fsrc\u002Ftk-form-fields-pattern\u002Fsrc\u002Ftemplates\u002Findex.pug";
+pug_html = pug_html + "\u003Ctitle\u003E";
+;pug_debug_line = 3;pug_debug_filename = "\u002FUsers\u002Fmcarag\u002Fsrc\u002Ftk-form-fields-pattern\u002Fsrc\u002Ftemplates\u002Findex.pug";
+pug_html = pug_html + (pug.escape(null == (pug_interp = title) ? "" : pug_interp)) + "\u003C\u002Ftitle\u003E";
+;pug_debug_line = 4;pug_debug_filename = "\u002FUsers\u002Fmcarag\u002Fsrc\u002Ftk-form-fields-pattern\u002Fsrc\u002Ftemplates\u002Findex.pug";
+pug_html = pug_html + "\u003Clink href=\"\u002F\u002Fstatic.xoedge.com\u002Fpatterns\u002Fcss\u002Ffonts.css\" rel=\"stylesheet\"\u002F\u003E";
+;pug_debug_line = 5;pug_debug_filename = "\u002FUsers\u002Fmcarag\u002Fsrc\u002Ftk-form-fields-pattern\u002Fsrc\u002Ftemplates\u002Findex.pug";
+pug_html = pug_html + "\u003Clink href=\"\u002F\u002Fstatic.xoedge.com\u002Fpatterns\u002Fcss\u002Ftk-bootstrap.4.css?v=4.3.4\" rel=\"stylesheet\"\u002F\u003E";
+;pug_debug_line = 6;pug_debug_filename = "\u002FUsers\u002Fmcarag\u002Fsrc\u002Ftk-form-fields-pattern\u002Fsrc\u002Ftemplates\u002Findex.pug";
+pug_html = pug_html + "\u003Clink href=\"index.css\" rel=\"stylesheet\"\u002F\u003E\u003C\u002Fhead\u003E";
+;pug_debug_line = 8;pug_debug_filename = "\u002FUsers\u002Fmcarag\u002Fsrc\u002Ftk-form-fields-pattern\u002Fsrc\u002Ftemplates\u002Findex.pug";
+pug_html = pug_html + "\u003Cbody\u003E";
+;pug_debug_line = 9;pug_debug_filename = "\u002FUsers\u002Fmcarag\u002Fsrc\u002Ftk-form-fields-pattern\u002Fsrc\u002Ftemplates\u002Findex.pug";
+pug_html = pug_html + "\u003Cdiv class=\"container-fluid\"\u003E";
+;pug_debug_line = 10;pug_debug_filename = "\u002FUsers\u002Fmcarag\u002Fsrc\u002Ftk-form-fields-pattern\u002Fsrc\u002Ftemplates\u002Findex.pug";
+pug_html = pug_html + "\u003Cdiv class=\"row\"\u003E";
+;pug_debug_line = 11;pug_debug_filename = "\u002FUsers\u002Fmcarag\u002Fsrc\u002Ftk-form-fields-pattern\u002Fsrc\u002Ftemplates\u002Findex.pug";
+pug_html = pug_html + "\u003Cform class=\"col-md-4 col-md-offset-4 tk-form-fields\" action=\"#0\"\u003E";
+;pug_debug_line = 12;pug_debug_filename = "\u002FUsers\u002Fmcarag\u002Fsrc\u002Ftk-form-fields-pattern\u002Fsrc\u002Ftemplates\u002Findex.pug";
+pug_html = pug_html + "\u003Cfieldset class=\"row\"\u003E";
+;pug_debug_line = 13;pug_debug_filename = "\u002FUsers\u002Fmcarag\u002Fsrc\u002Ftk-form-fields-pattern\u002Fsrc\u002Ftemplates\u002Findex.pug";
+pug_html = pug_html + "\u003Cdiv class=\"col-xs-6\"\u003E";
+;pug_debug_line = 14;pug_debug_filename = "\u002FUsers\u002Fmcarag\u002Fsrc\u002Ftk-form-fields-pattern\u002Fsrc\u002Ftemplates\u002Findex.pug";
+pug_html = pug_html + "\u003Cinput id=\"first_name\" type=\"text\" name=\"first_name\" required=\"\" placeholder=\" \"\u002F\u003E";
+;pug_debug_line = 15;pug_debug_filename = "\u002FUsers\u002Fmcarag\u002Fsrc\u002Ftk-form-fields-pattern\u002Fsrc\u002Ftemplates\u002Findex.pug";
+pug_html = pug_html + "\u003Clabel for=\"first_name\"\u003E";
+;pug_debug_line = 15;pug_debug_filename = "\u002FUsers\u002Fmcarag\u002Fsrc\u002Ftk-form-fields-pattern\u002Fsrc\u002Ftemplates\u002Findex.pug";
+pug_html = pug_html + "First Name\u003C\u002Flabel\u003E\u003C\u002Fdiv\u003E";
+;pug_debug_line = 16;pug_debug_filename = "\u002FUsers\u002Fmcarag\u002Fsrc\u002Ftk-form-fields-pattern\u002Fsrc\u002Ftemplates\u002Findex.pug";
+pug_html = pug_html + "\u003Cdiv class=\"col-xs-6\"\u003E";
+;pug_debug_line = 17;pug_debug_filename = "\u002FUsers\u002Fmcarag\u002Fsrc\u002Ftk-form-fields-pattern\u002Fsrc\u002Ftemplates\u002Findex.pug";
+pug_html = pug_html + "\u003Cinput id=\"last_name\" type=\"text\" name=\"last_name\" required=\"\" placeholder=\" \"\u002F\u003E";
+;pug_debug_line = 18;pug_debug_filename = "\u002FUsers\u002Fmcarag\u002Fsrc\u002Ftk-form-fields-pattern\u002Fsrc\u002Ftemplates\u002Findex.pug";
+pug_html = pug_html + "\u003Clabel for=\"last_name\"\u003E";
+;pug_debug_line = 18;pug_debug_filename = "\u002FUsers\u002Fmcarag\u002Fsrc\u002Ftk-form-fields-pattern\u002Fsrc\u002Ftemplates\u002Findex.pug";
+pug_html = pug_html + "Last Name\u003C\u002Flabel\u003E\u003C\u002Fdiv\u003E\u003C\u002Ffieldset\u003E";
+;pug_debug_line = 19;pug_debug_filename = "\u002FUsers\u002Fmcarag\u002Fsrc\u002Ftk-form-fields-pattern\u002Fsrc\u002Ftemplates\u002Findex.pug";
+pug_html = pug_html + "\u003Cdiv class=\"row\"\u003E";
+;pug_debug_line = 20;pug_debug_filename = "\u002FUsers\u002Fmcarag\u002Fsrc\u002Ftk-form-fields-pattern\u002Fsrc\u002Ftemplates\u002Findex.pug";
+pug_html = pug_html + "\u003Cfieldset class=\"col-xs-12\"\u003E";
+;pug_debug_line = 21;pug_debug_filename = "\u002FUsers\u002Fmcarag\u002Fsrc\u002Ftk-form-fields-pattern\u002Fsrc\u002Ftemplates\u002Findex.pug";
+pug_html = pug_html + "\u003Cinput id=\"nickname\" type=\"text\" name=\"nickname\" placeholder=\" \"\u002F\u003E";
+;pug_debug_line = 22;pug_debug_filename = "\u002FUsers\u002Fmcarag\u002Fsrc\u002Ftk-form-fields-pattern\u002Fsrc\u002Ftemplates\u002Findex.pug";
+pug_html = pug_html + "\u003Clabel for=\"nickname\"\u003E";
+;pug_debug_line = 22;pug_debug_filename = "\u002FUsers\u002Fmcarag\u002Fsrc\u002Ftk-form-fields-pattern\u002Fsrc\u002Ftemplates\u002Findex.pug";
+pug_html = pug_html + "Nickname\u003C\u002Flabel\u003E\u003C\u002Ffieldset\u003E\u003C\u002Fdiv\u003E";
+;pug_debug_line = 23;pug_debug_filename = "\u002FUsers\u002Fmcarag\u002Fsrc\u002Ftk-form-fields-pattern\u002Fsrc\u002Ftemplates\u002Findex.pug";
+pug_html = pug_html + "\u003Cdiv class=\"row\"\u003E";
+;pug_debug_line = 24;pug_debug_filename = "\u002FUsers\u002Fmcarag\u002Fsrc\u002Ftk-form-fields-pattern\u002Fsrc\u002Ftemplates\u002Findex.pug";
+pug_html = pug_html + "\u003Cfieldset class=\"col-xs-12\"\u003E";
+;pug_debug_line = 25;pug_debug_filename = "\u002FUsers\u002Fmcarag\u002Fsrc\u002Ftk-form-fields-pattern\u002Fsrc\u002Ftemplates\u002Findex.pug";
+pug_html = pug_html + "\u003Cinput id=\"email\" type=\"email\" name=\"email\" required=\"\" placeholder=\" \"\u002F\u003E";
+;pug_debug_line = 26;pug_debug_filename = "\u002FUsers\u002Fmcarag\u002Fsrc\u002Ftk-form-fields-pattern\u002Fsrc\u002Ftemplates\u002Findex.pug";
+pug_html = pug_html + "\u003Clabel for=\"email\"\u003E";
+;pug_debug_line = 26;pug_debug_filename = "\u002FUsers\u002Fmcarag\u002Fsrc\u002Ftk-form-fields-pattern\u002Fsrc\u002Ftemplates\u002Findex.pug";
+pug_html = pug_html + "Email Address\u003C\u002Flabel\u003E";
+;pug_debug_line = 27;pug_debug_filename = "\u002FUsers\u002Fmcarag\u002Fsrc\u002Ftk-form-fields-pattern\u002Fsrc\u002Ftemplates\u002Findex.pug";
+pug_html = pug_html + "\u003Cdiv class=\"requirements\"\u003E";
+;pug_debug_line = 28;pug_debug_filename = "\u002FUsers\u002Fmcarag\u002Fsrc\u002Ftk-form-fields-pattern\u002Fsrc\u002Ftemplates\u002Findex.pug";
+pug_html = pug_html + "Must be a valid email address.\u003C\u002Fdiv\u003E\u003C\u002Ffieldset\u003E\u003C\u002Fdiv\u003E";
+;pug_debug_line = 29;pug_debug_filename = "\u002FUsers\u002Fmcarag\u002Fsrc\u002Ftk-form-fields-pattern\u002Fsrc\u002Ftemplates\u002Findex.pug";
+pug_html = pug_html + "\u003Cdiv class=\"row\"\u003E";
+;pug_debug_line = 30;pug_debug_filename = "\u002FUsers\u002Fmcarag\u002Fsrc\u002Ftk-form-fields-pattern\u002Fsrc\u002Ftemplates\u002Findex.pug";
+pug_html = pug_html + "\u003Cfieldset class=\"col-xs-12\"\u003E";
+;pug_debug_line = 31;pug_debug_filename = "\u002FUsers\u002Fmcarag\u002Fsrc\u002Ftk-form-fields-pattern\u002Fsrc\u002Ftemplates\u002Findex.pug";
+pug_html = pug_html + "\u003Cinput id=\"password\" type=\"password\" name=\"password\" required=\"\" placeholder=\" \" pattern=\"(?=.*d)(?=.*[a-z])(?=.*[A-Z]).{6,}\"\u002F\u003E";
+;pug_debug_line = 32;pug_debug_filename = "\u002FUsers\u002Fmcarag\u002Fsrc\u002Ftk-form-fields-pattern\u002Fsrc\u002Ftemplates\u002Findex.pug";
+pug_html = pug_html + "\u003Clabel for=\"password\"\u003E";
+;pug_debug_line = 32;pug_debug_filename = "\u002FUsers\u002Fmcarag\u002Fsrc\u002Ftk-form-fields-pattern\u002Fsrc\u002Ftemplates\u002Findex.pug";
+pug_html = pug_html + "Password\u003C\u002Flabel\u003E";
+;pug_debug_line = 33;pug_debug_filename = "\u002FUsers\u002Fmcarag\u002Fsrc\u002Ftk-form-fields-pattern\u002Fsrc\u002Ftemplates\u002Findex.pug";
+pug_html = pug_html + "\u003Cdiv class=\"requirements\"\u003E";
+;pug_debug_line = 34;pug_debug_filename = "\u002FUsers\u002Fmcarag\u002Fsrc\u002Ftk-form-fields-pattern\u002Fsrc\u002Ftemplates\u002Findex.pug";
+pug_html = pug_html + "Your password must be at least 6 characters as well as contain at least one uppercase, one lowercase, and one number.\u003C\u002Fdiv\u003E\u003C\u002Ffieldset\u003E\u003C\u002Fdiv\u003E";
+;pug_debug_line = 35;pug_debug_filename = "\u002FUsers\u002Fmcarag\u002Fsrc\u002Ftk-form-fields-pattern\u002Fsrc\u002Ftemplates\u002Findex.pug";
+pug_html = pug_html + "\u003Cdiv class=\"row\"\u003E";
+;pug_debug_line = 36;pug_debug_filename = "\u002FUsers\u002Fmcarag\u002Fsrc\u002Ftk-form-fields-pattern\u002Fsrc\u002Ftemplates\u002Findex.pug";
+pug_html = pug_html + "\u003Cfieldset class=\"col-xs-12\"\u003E";
+;pug_debug_line = 37;pug_debug_filename = "\u002FUsers\u002Fmcarag\u002Fsrc\u002Ftk-form-fields-pattern\u002Fsrc\u002Ftemplates\u002Findex.pug";
+pug_html = pug_html + "\u003Cinput id=\"tel\" type=\"tel\" name=\"tel\" required=\"\" placeholder=\" \"\u002F\u003E";
+;pug_debug_line = 38;pug_debug_filename = "\u002FUsers\u002Fmcarag\u002Fsrc\u002Ftk-form-fields-pattern\u002Fsrc\u002Ftemplates\u002Findex.pug";
+pug_html = pug_html + "\u003Clabel for=\"tel\"\u003E";
+;pug_debug_line = 38;pug_debug_filename = "\u002FUsers\u002Fmcarag\u002Fsrc\u002Ftk-form-fields-pattern\u002Fsrc\u002Ftemplates\u002Findex.pug";
+pug_html = pug_html + "Phone Number\u003C\u002Flabel\u003E\u003C\u002Ffieldset\u003E\u003C\u002Fdiv\u003E";
+;pug_debug_line = 39;pug_debug_filename = "\u002FUsers\u002Fmcarag\u002Fsrc\u002Ftk-form-fields-pattern\u002Fsrc\u002Ftemplates\u002Findex.pug";
+pug_html = pug_html + "\u003Cdiv class=\"row\"\u003E";
+;pug_debug_line = 40;pug_debug_filename = "\u002FUsers\u002Fmcarag\u002Fsrc\u002Ftk-form-fields-pattern\u002Fsrc\u002Ftemplates\u002Findex.pug";
+pug_html = pug_html + "\u003Cfieldset class=\"col-xs-12\"\u003E";
+;pug_debug_line = 41;pug_debug_filename = "\u002FUsers\u002Fmcarag\u002Fsrc\u002Ftk-form-fields-pattern\u002Fsrc\u002Ftemplates\u002Findex.pug";
+pug_html = pug_html + "\u003Cinput id=\"guest_count\" type=\"number\" name=\"guest_count\" placeholder=\" \"\u002F\u003E";
+;pug_debug_line = 42;pug_debug_filename = "\u002FUsers\u002Fmcarag\u002Fsrc\u002Ftk-form-fields-pattern\u002Fsrc\u002Ftemplates\u002Findex.pug";
+pug_html = pug_html + "\u003Clabel for=\"guest_count\"\u003E";
+;pug_debug_line = 42;pug_debug_filename = "\u002FUsers\u002Fmcarag\u002Fsrc\u002Ftk-form-fields-pattern\u002Fsrc\u002Ftemplates\u002Findex.pug";
+pug_html = pug_html + "Guest Count\u003C\u002Flabel\u003E\u003C\u002Ffieldset\u003E\u003C\u002Fdiv\u003E";
+;pug_debug_line = 43;pug_debug_filename = "\u002FUsers\u002Fmcarag\u002Fsrc\u002Ftk-form-fields-pattern\u002Fsrc\u002Ftemplates\u002Findex.pug";
+pug_html = pug_html + "\u003Cdiv class=\"row\"\u003E";
+;pug_debug_line = 44;pug_debug_filename = "\u002FUsers\u002Fmcarag\u002Fsrc\u002Ftk-form-fields-pattern\u002Fsrc\u002Ftemplates\u002Findex.pug";
+pug_html = pug_html + "\u003Cfieldset class=\"col-xs-12\"\u003E";
+;pug_debug_line = 45;pug_debug_filename = "\u002FUsers\u002Fmcarag\u002Fsrc\u002Ftk-form-fields-pattern\u002Fsrc\u002Ftemplates\u002Findex.pug";
+pug_html = pug_html + "\u003Cinput id=\"ww_url\" type=\"url\" name=\"ww_url\" required=\"\" placeholder=\" \"\u002F\u003E";
+;pug_debug_line = 46;pug_debug_filename = "\u002FUsers\u002Fmcarag\u002Fsrc\u002Ftk-form-fields-pattern\u002Fsrc\u002Ftemplates\u002Findex.pug";
+pug_html = pug_html + "\u003Clabel for=\"ww_url\"\u003E";
+;pug_debug_line = 46;pug_debug_filename = "\u002FUsers\u002Fmcarag\u002Fsrc\u002Ftk-form-fields-pattern\u002Fsrc\u002Ftemplates\u002Findex.pug";
+pug_html = pug_html + "Wedding Website URL\u003C\u002Flabel\u003E\u003C\u002Ffieldset\u003E\u003C\u002Fdiv\u003E";
+;pug_debug_line = 47;pug_debug_filename = "\u002FUsers\u002Fmcarag\u002Fsrc\u002Ftk-form-fields-pattern\u002Fsrc\u002Ftemplates\u002Findex.pug";
+pug_html = pug_html + "\u003Cdiv class=\"row\"\u003E";
+;pug_debug_line = 48;pug_debug_filename = "\u002FUsers\u002Fmcarag\u002Fsrc\u002Ftk-form-fields-pattern\u002Fsrc\u002Ftemplates\u002Findex.pug";
+pug_html = pug_html + "\u003Cfieldset class=\"col-xs-12\"\u003E";
+;pug_debug_line = 49;pug_debug_filename = "\u002FUsers\u002Fmcarag\u002Fsrc\u002Ftk-form-fields-pattern\u002Fsrc\u002Ftemplates\u002Findex.pug";
+pug_html = pug_html + "\u003Cinput id=\"hint\" type=\"text\" name=\"hint\" disabled=\"\" placeholder=\" \"\u002F\u003E";
+;pug_debug_line = 50;pug_debug_filename = "\u002FUsers\u002Fmcarag\u002Fsrc\u002Ftk-form-fields-pattern\u002Fsrc\u002Ftemplates\u002Findex.pug";
+pug_html = pug_html + "\u003Clabel for=\"nickname\"\u003E";
+;pug_debug_line = 50;pug_debug_filename = "\u002FUsers\u002Fmcarag\u002Fsrc\u002Ftk-form-fields-pattern\u002Fsrc\u002Ftemplates\u002Findex.pug";
+pug_html = pug_html + "Hint\u003C\u002Flabel\u003E\u003C\u002Ffieldset\u003E\u003C\u002Fdiv\u003E";
+;pug_debug_line = 51;pug_debug_filename = "\u002FUsers\u002Fmcarag\u002Fsrc\u002Ftk-form-fields-pattern\u002Fsrc\u002Ftemplates\u002Findex.pug";
+pug_html = pug_html + "\u003Cdiv class=\"row\"\u003E";
+;pug_debug_line = 52;pug_debug_filename = "\u002FUsers\u002Fmcarag\u002Fsrc\u002Ftk-form-fields-pattern\u002Fsrc\u002Ftemplates\u002Findex.pug";
+pug_html = pug_html + "\u003Cfieldset class=\"textarea-container col-xs-12\"\u003E";
+;pug_debug_line = 53;pug_debug_filename = "\u002FUsers\u002Fmcarag\u002Fsrc\u002Ftk-form-fields-pattern\u002Fsrc\u002Ftemplates\u002Findex.pug";
+pug_html = pug_html + "\u003Clabel for=\"optional\"\u003E";
+;pug_debug_line = 53;pug_debug_filename = "\u002FUsers\u002Fmcarag\u002Fsrc\u002Ftk-form-fields-pattern\u002Fsrc\u002Ftemplates\u002Findex.pug";
+pug_html = pug_html + "Optional\u003C\u002Flabel\u003E";
+;pug_debug_line = 54;pug_debug_filename = "\u002FUsers\u002Fmcarag\u002Fsrc\u002Ftk-form-fields-pattern\u002Fsrc\u002Ftemplates\u002Findex.pug";
+pug_html = pug_html + "\u003Ctextarea id=\"optional\" rows=\"5\" name=\"optional\" placeholder=\"Example note: Hi! Thank you so much for inviting us to your wedding. See you soon!\"\u003E\u003C\u002Ftextarea\u003E\u003C\u002Ffieldset\u003E\u003C\u002Fdiv\u003E";
+;pug_debug_line = 55;pug_debug_filename = "\u002FUsers\u002Fmcarag\u002Fsrc\u002Ftk-form-fields-pattern\u002Fsrc\u002Ftemplates\u002Findex.pug";
+pug_html = pug_html + "\u003Cdiv class=\"row\"\u003E";
+;pug_debug_line = 56;pug_debug_filename = "\u002FUsers\u002Fmcarag\u002Fsrc\u002Ftk-form-fields-pattern\u002Fsrc\u002Ftemplates\u002Findex.pug";
+pug_html = pug_html + "\u003Cfieldset class=\"textarea-container col-xs-12\"\u003E";
+;pug_debug_line = 57;pug_debug_filename = "\u002FUsers\u002Fmcarag\u002Fsrc\u002Ftk-form-fields-pattern\u002Fsrc\u002Ftemplates\u002Findex.pug";
+pug_html = pug_html + "\u003Ctextarea id=\"optional_2\" rows=\"5\" name=\"optional_2\" placeholder=\"Another really long note.\"\u003E\u003C\u002Ftextarea\u003E\u003C\u002Ffieldset\u003E\u003C\u002Fdiv\u003E";
+;pug_debug_line = 58;pug_debug_filename = "\u002FUsers\u002Fmcarag\u002Fsrc\u002Ftk-form-fields-pattern\u002Fsrc\u002Ftemplates\u002Findex.pug";
+pug_html = pug_html + "\u003Cdiv class=\"row\"\u003E";
+;pug_debug_line = 59;pug_debug_filename = "\u002FUsers\u002Fmcarag\u002Fsrc\u002Ftk-form-fields-pattern\u002Fsrc\u002Ftemplates\u002Findex.pug";
+pug_html = pug_html + "\u003Cbutton class=\"col-xs-12\" type=\"submit\"\u003E";
+;pug_debug_line = 59;pug_debug_filename = "\u002FUsers\u002Fmcarag\u002Fsrc\u002Ftk-form-fields-pattern\u002Fsrc\u002Ftemplates\u002Findex.pug";
+pug_html = pug_html + "Sign Up\u003C\u002Fbutton\u003E\u003C\u002Fdiv\u003E\u003C\u002Fform\u003E\u003C\u002Fdiv\u003E\u003C\u002Fdiv\u003E\u003C\u002Fbody\u003E\u003C\u002Fhtml\u003E";}.call(this,"title" in locals_for_with?locals_for_with.title:typeof title!=="undefined"?title:undefined));} catch (err) {pug.rethrow(err, pug_debug_filename, pug_debug_line);};return pug_html;}
