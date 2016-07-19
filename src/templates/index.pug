@@ -10,65 +10,100 @@ html
       .row
         .col-md-4.col-md-offset-4
           h1 The Knot Form Fields
-          p
-            |This is a demo of the form fields for The Knot as designed by
-            |Silvia Tueros-Cossio. It was patternized and turned into this
-            |demo (and corresponding 
-            a(href="https://github.com/xogroup/tk-form-fields")
-              |repo
-            |) by 
-            a(href="https://github.com/jazzcrazed")
-              |Marco Carag
-            |.
+
+          ul.list-unstyled.xs-divider.list-horizontal
+            li
+              a.content.value(href="#usage") Usage
+            li
+              a.content.value(href="#demo") Demo
+            li
+              a.content.value(href="#contributing") Contributing
+
+          :markdown
+            This is a demo of the form fields for The Knot as designed by
+            Silvia Tueros-Cossio. It was patternized and turned into this
+            demo (and corresponding [repo](https://github.com/xogroup/tk-form-fields)
+            by [Marco Carag](https://github.com/jazzcrazed)).
+
+          h2
+            a#usage Usage
+
+          :markdown
+
+            1. Download **[tk-form-fields.0.0.1.css](https://github.com/xogroup/tk-form-fields/blob/master/bin/tk-form-fields.0.0.1.css)**.
+            2. Place the file somewhere in your application that makes sense.
+              a. In Rails, `vendor/assets` would probably make sense.
+              b. In an Express Node app, try serving out of `vendor` -- eg:
+                 ```
+                 app.use('/static', express.static(__dirname + '/vendor'));
+                 ```
+            3. Then architect your form's markup, following the below demo as an example. So long as you're using the appropriate classes and HTML, all should be well!
 
       .row
-        form.col-md-4.col-md-offset-4.tk-form-fields(action='#0')
-          fieldset.row
-            .col-xs-6
-              input#first_name(type='text', name='first_name', required='', placeholder=' ')
-              label(for='first_name') First Name
-            .col-xs-6
-              input#last_name(type='text', name='last_name', required='', placeholder=' ')
-              label(for='last_name') Last Name
-          .row
-            fieldset.col-xs-12
-              input#nickname(type='text', name='nickname', placeholder=' ')
-              label(for='nickname') Nickname
-          .row
-            fieldset.col-xs-12
-              input#email(type='email', name='email', required='', placeholder=' ')
-              label(for='email') Email Address
-              .requirements
-                | Must be a valid email address.
-          .row
-            fieldset.col-xs-12
-              input#password(type='password', name='password', required='', placeholder=' ', pattern='(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,}')
-              label(for='password') Password
-              .requirements
-                | Your password must be at least 6 characters as well as contain at least one uppercase, one lowercase, and one number.
-          .row
-            fieldset.col-xs-12
-              input#tel(type='tel', name='tel', required='', placeholder=' ')
-              label(for='tel') Phone Number
-          .row
-            fieldset.col-xs-12
-              input#guest_count(type='number', name='guest_count', placeholder=' ')
-              label(for='guest_count') Guest Count
-          .row
-            fieldset.col-xs-12
-              input#ww_url(type='url', name='ww_url', required='', placeholder=' ')
-              label(for='ww_url') Wedding Website URL
-          .row
-            fieldset.col-xs-12
-              input#hint(type='text', name='hint', disabled='', placeholder=' ')
-              label(for='nickname') Hint
-          .row
-            fieldset.textarea-container.col-xs-12
-              label(for='optional') Optional
-              textarea#optional(rows='5', name='optional', placeholder='Example note: Hi! Thank you so much for inviting us to your wedding. See you soon!')
-          .row
-            fieldset.textarea-container.col-xs-12
-              textarea#optional_2(rows='5', name='optional_2', placeholder='Another really long note.')
-          .row
-            button.col-xs-12(type='submit') Sign Up
+        .col-md-4.col-md-offset-4
+          h2
+            a#demo Demo
+          form.tk-form-fields(action='#0')
+            fieldset.row
+              .col-xs-6
+                input#first_name(type='text', name='first_name', required='', placeholder=' ')
+                label(for='first_name') First Name
+              .col-xs-6
+                input#last_name(type='text', name='last_name', required='', placeholder=' ')
+                label(for='last_name') Last Name
+            .row
+              fieldset.col-xs-12
+                input#nickname(type='text', name='nickname', placeholder=' ')
+                label(for='nickname') Nickname
+            .row
+              fieldset.col-xs-12
+                input#email(type='email', name='email', required='', placeholder=' ')
+                label(for='email') Email Address
+                .requirements
+                  | Must be a valid email address.
+            .row
+              fieldset.col-xs-12
+                input#password(type='password', name='password', required='', placeholder=' ', pattern='(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,}')
+                label(for='password') Password
+                .requirements
+                  | Your password must be at least 6 characters as well as contain at least one uppercase, one lowercase, and one number.
+            .row
+              fieldset.col-xs-12
+                input#tel(type='tel', name='tel', required='', placeholder=' ')
+                label(for='tel') Phone Number
+            .row
+              fieldset.col-xs-12
+                input#guest_count(type='number', name='guest_count', placeholder=' ')
+                label(for='guest_count') Guest Count
+            .row
+              fieldset.col-xs-12
+                input#ww_url(type='url', name='ww_url', required='', placeholder=' ')
+                label(for='ww_url') Wedding Website URL
+            .row
+              fieldset.col-xs-12
+                input#hint(type='text', name='hint', disabled='', placeholder=' ')
+                label(for='nickname') Hint
+            .row
+              fieldset.textarea-container.col-xs-12
+                label(for='optional') Optional
+                textarea#optional(rows='5', name='optional', placeholder='Example note: Hi! Thank you so much for inviting us to your wedding. See you soon!')
+            .row
+              fieldset.textarea-container.col-xs-12
+                textarea#optional_2(rows='5', name='optional_2', placeholder='Another really long note.')
+            .row
+              .col-xs-12
+                button.btn-block(type='submit') Sign Up
+      .row
+        .col-md-4.col-md-offset-4
+          h2
+            a#contributing Contributing changes
 
+          :markdown
+            **DO NOT modify the `tk-form-fields.0.0.1.css` directly!!!** Instead,
+            fork the [repo](https://github.com/xogroup/tk-form-fields), make your
+            changes there, and file a pull request. You could also file an
+            [issue](https://github.com/xogroup/tk-form-fields/issues)
+
+            If you need to change things more urgently, override the css/html
+            in your application's stylesheets and templates (eg, in a Rails app
+            within `app/assets/application.css`).
