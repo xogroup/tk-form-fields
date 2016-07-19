@@ -2,9 +2,8 @@ const fs = require('file-system');
 const sass = require('node-sass');
 const pug = require('pug');
 const src = `${__dirname}/src`;
-const pub = `${__dirname}/public`;
+const docs = `${__dirname}/docs`;
 const ghpages = require('gh-pages');
-const rimraf = require('rimraf');
 
 function writeFile(inFile, outFile) {
   return new Promise((resolve) => {
@@ -23,20 +22,20 @@ const cssPromise = sass.render({
   file: `${src}/stylesheets/index.scss`,
 }, (err, result) => {
   if (!err) {
-    writeFile(result.css, `${pub}/index.css`);
+    writeFile(result.css, `${docs}/index.css`);
   } else {
     console.log('There was a problem!', err);
   }
 });
 
 const htmlPromise = writeFile(
-  pug.renderFile(`${src}/templates/index.pug`), `${pub}/index.html`
+  pug.renderFile(`${src}/templates/index.pug`), `${docs}/index.html`
 );
 
 Promise.all([cssPromise, htmlPromise]).then(() => {
-  ghpages.publish(pub, (err) => {
+  ghpages.publish(docs, (err) => {
     if (!err) {
-      console.log('Published to https://xogroup.github.io/tk-form-fields/');
+      console.log('published to https://xogroup.github.io/tk-form-fields/');
     } else {
       console.log('There was a problem!', err);
     }
