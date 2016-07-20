@@ -64,8 +64,8 @@
   }
   // invalid text input fields, must be required
   input:invalid:not(:placeholder-shown) {
-    background: $coral-1;
-    border: $coral-1-border;
+    background: $coral-tint-80;
+    border: $coral-tint-80-border;
     transition: all 0.2s ease-out 1.5s;
     + label {
       font-size: $spacer-x;
