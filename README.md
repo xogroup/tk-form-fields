@@ -44,7 +44,8 @@ Make sure tests pass:
 $ npm test
 ```
 
-Uptick the version in `package.json`. Then compile the build:
+Uptick the version in `package.json` and in the docs in `src/templates/index.pug`.
+Then compile the build:
 
 ```
 $ npm run build
