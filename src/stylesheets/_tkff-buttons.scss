@@ -12,5 +12,9 @@
     line-height: 18px;
     margin: $spacer-x 0;
     padding: 15px 0;
+
+    &:disabled {
+      background-color: $medium-gray;
+    }
   }
 }
