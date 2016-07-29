@@ -7,16 +7,20 @@
 // text area
 .textarea-container {
   label {
+    background-color: $gray-2;
     color: $gray-4;
     font-size: $spacer-x;
     font-weight: 500;
-    height: 30px;
-    left: 20px;
+    height: 26px;
+    left: 15px;
+    padding-left: 5px;
+    padding-top: 6px;
     position: absolute;
-    top: 6px;
+    right: 11px;
+    top: 1px;
   }
   label + textarea {
-    padding: 25px $spacer-x 4px;
+    padding: 26px $spacer-x 1px;
   }
   textarea {
     -webkit-appearance: none;
