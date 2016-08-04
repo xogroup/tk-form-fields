@@ -1,6 +1,6 @@
 {
   "name": "tk-form-fields-pattern",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "This is HTML and styles to render the form fields pattern, as designed by Silvia",
   "main": "index.js",
   "scripts": {
