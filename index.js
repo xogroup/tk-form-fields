@@ -14,7 +14,7 @@ app.use(sass({
 app.use(express.static(`${__dirname}/public`));
 
 app.get('/', (req, res) => {
-  res.render('index', { title: 'TK Form Fields v0.0.1' });
+  res.render('index', { title: 'TK Form Fields v0.0.5' });
 });
 
 app.listen(9494, () => {
