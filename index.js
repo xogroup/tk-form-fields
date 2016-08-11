@@ -12,6 +12,7 @@ app.use(sass({
   force: true,
 }));
 app.use(express.static(`${__dirname}/public`));
+app.use(express.static(`${__dirname}/src/javascripts`));
 
 app.get('/', (req, res) => {
   res.render('index', { title: 'TK Form Fields v0.0.5' });

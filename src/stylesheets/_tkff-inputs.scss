@@ -82,7 +82,7 @@
   @-moz-document url-prefix() {
     input + label {
       color: #000;
-      font-size: 10px;
+      font-size: $spacer-x;
       font-weight: 500;
       top: 6px;
     }
