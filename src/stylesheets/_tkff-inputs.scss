@@ -43,6 +43,30 @@
   }
 }
 
+.input-valid-not-focused {
+  background: $gray-2;
+  + label {
+    font-size: $spacer-x;
+    font-weight: 500;
+    top: 6px;
+  }
+}
+
+.input-invalid {
+  background: $coral-tint-80;
+  border: $coral-tint-80-border;
+  transition: all 0.2s ease-out 1.5s;
+  + label {
+    font-size: $spacer-x;
+    font-weight: 500;
+    top: 6px;
+  }
+  ~ .requirements {
+    max-height: 200px;
+    padding: 5px $spacer-x 4px;
+  }
+}
+
 /* Validation */
 .tk-form-fields {
   // required text styling
@@ -55,27 +79,29 @@
   }
   // default text input fields
   input:valid:not(:focus):not(:placeholder-shown) {
-    background: $gray-2;
-    + label {
-      font-size: $spacer-x;
-      font-weight: 500;
-      top: 6px;
-    }
+    @extend .input-valid-not-focused;
+    /*background: $gray-2;*/
+    /*+ label {*/
+      /*font-size: $spacer-x;*/
+      /*font-weight: 500;*/
+      /*top: 6px;*/
+    /*}*/
   }
   // invalid text input fields, must be required
   input:invalid:not(:placeholder-shown) {
-    background: $coral-tint-80;
-    border: $coral-tint-80-border;
-    transition: all 0.2s ease-out 1.5s;
-    + label {
-      font-size: $spacer-x;
-      font-weight: 500;
-      top: 6px;
-    }
-    ~ .requirements {
-      max-height: 200px;
-      padding: 5px $spacer-x 4px;
-    }
+    @extend .input-invalid;
+    /*background: $coral-tint-80;*/
+    /*border: $coral-tint-80-border;*/
+    /*transition: all 0.2s ease-out 1.5s;*/
+    /*+ label {*/
+      /*font-size: $spacer-x;*/
+      /*font-weight: 500;*/
+      /*top: 6px;*/
+    /*}*/
+    /*~ .requirements {*/
+      /*max-height: 200px;*/
+      /*padding: 5px $spacer-x 4px;*/
+    /*}*/
   }
 
   // Firefox doesn't support (:placeholder-shown) at the moment
