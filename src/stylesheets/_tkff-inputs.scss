@@ -36,7 +36,7 @@
     // adding new one
     + label {
       color: $black;
-      font-size: $spacer-x;
+      font-size: $font-size-xsmall;
       font-weight: 500;
       top: 6px;
     }
@@ -57,7 +57,7 @@
   input:valid:not(:focus):not(:placeholder-shown) {
     background: $gray-2;
     + label {
-      font-size: $spacer-x;
+      font-size: $font-size-xsmall;
       font-weight: 500;
       top: 6px;
     }
@@ -68,7 +68,7 @@
     border: $coral-tint-80-border;
     transition: all 0.2s ease-out 1.5s;
     + label {
-      font-size: $spacer-x;
+      font-size: $font-size-xsmall;
       font-weight: 500;
       top: 6px;
     }
@@ -81,8 +81,8 @@
   // Firefox doesn't support (:placeholder-shown) at the moment
   @-moz-document url-prefix() {
     input + label {
-      color: #000;
-      font-size: 10px;
+      color: $black;
+      font-size: $font-size-xsmall;
       font-weight: 500;
       top: 6px;
     }

@@ -1,6 +1,6 @@
 html
   head
-    title= title
+    title The Knot Form Fields #{version}
     link(href="//static.xoedge.com/patterns/css/fonts.css", rel="stylesheet")
     link(href="//static.xoedge.com/patterns/css/tk-bootstrap.4.css?v=4.3.4", rel="stylesheet")
     link(href="index.css", rel="stylesheet")
@@ -28,16 +28,20 @@ html
           h2
             a#usage Usage
 
-          :markdown
 
-            1. Download **[tk-form-fields.0.0.5.css](https://github.com/xogroup/tk-form-fields/blob/master/bin/tk-form-fields.0.0.5.css)**.
-            2. Place the file somewhere in your application that makes sense.
-              a. In Rails, `vendor/assets` would probably make sense.
-              b. In an Express Node app, try serving out of `vendor` -- eg:
-                 ```
-                 app.use('/static', express.static(__dirname + '/vendor'));
-                 ```
-            3. Then architect your form's markup, following the below demo as an example. So long as you're using the appropriate classes and HTML, all should be well!
+          ol
+            li
+              | Download 
+              a(href="https://github.com/xogroup/tk-form-fields/blob/master/bin/tk-form-fields.#{version}.css")
+                b tk-form-fields.#{version}.css
+            li Place the file somewhere in your application that makes sense.
+              li In Rails, `vendor/assets` would probably make sense.
+              li In an Express Node app, try serving out of `vendor` -- eg:
+                :markdown
+                  ```
+                  app.use('/static', express.static(__dirname + '/vendor'));
+                  ```
+            li Then architect your form's markup, following the below demo as an example. So long as you're using the appropriate classes and HTML, all should be well!
 
       .row
         .col-md-4.col-md-offset-4
@@ -99,12 +103,17 @@ html
           h2
             a#contributing Contributing changes
 
-          :markdown
-            **DO NOT modify the `tk-form-fields.0.0.5.css` directly!!!** Instead,
-            fork the [repo](https://github.com/xogroup/tk-form-fields), make your
-            changes there, and file a pull request. You could also file an
-            [issue](https://github.com/xogroup/tk-form-fields/issues)
+          p
+            strong
+              | DO NOT modify the 
+              code tk-form-fields.#{version}.css 
+              | directly!!!
+            :markdown
+              Instead, fork the [repo](https://github.com/xogroup/tk-form-fields),
+              make your changes there, and file a pull request. You could also file
+              an [issue](https://github.com/xogroup/tk-form-fields/issues)
 
+          :markdown
             If you need to change things more urgently, override the css/html
             in your application's stylesheets and templates (eg, in a Rails app
             within `app/assets/application.css`).

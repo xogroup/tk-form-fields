@@ -1,6 +1,7 @@
 const express = require('express');
 const sass = require('node-sass-middleware');
 const app = express();
+const version = require('./package.json').version;
 
 app.set('view engine', 'pug');
 app.set('views', `${__dirname}/src/templates`);
@@ -14,7 +15,7 @@ app.use(sass({
 app.use(express.static(`${__dirname}/public`));
 
 app.get('/', (req, res) => {
-  res.render('index', { title: 'TK Form Fields v0.0.5' });
+  res.render('index', version);
 });
 
 app.listen(9494, () => {
