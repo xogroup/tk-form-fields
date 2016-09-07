@@ -96,6 +96,13 @@
     max-height: 200px;
     padding: 5px 10px 4px; }
 
+@-moz-document url-prefix() {
+  .tk-form-fields input + label {
+    color: #000;
+    font-size: 10px;
+    font-weight: 500;
+    top: 6px; } }
+
 /* Disabled */
 .tk-form-fields input:disabled {
   background: #fafafa;
@@ -127,18 +134,25 @@
   line-height: 18px;
   margin: 10px 0;
   padding: 15px 0; }
+  .tk-form-fields button:disabled,
+  .tk-form-fields [type="submit"]:disabled {
+    background-color: #c3c3c3; }
 
 .textarea-container label {
+  background-color: #f4f4f4;
   color: #888;
   font-size: 10px;
   font-weight: 500;
-  height: 30px;
-  left: 20px;
+  height: 26px;
+  left: 15px;
+  padding-left: 5px;
+  padding-top: 6px;
   position: absolute;
-  top: 6px; }
+  right: 11px;
+  top: 1px; }
 
 .textarea-container label + textarea {
-  padding: 25px 10px 4px; }
+  padding: 26px 10px 1px; }
 
 .textarea-container textarea {
   -webkit-appearance: none;
