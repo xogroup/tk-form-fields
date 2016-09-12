@@ -28,3 +28,4 @@ jspm_packages
 # Dev server
 public
 docs
+*.sw[pon]

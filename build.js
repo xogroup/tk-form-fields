@@ -7,6 +7,7 @@ const packageJson = require(`${__dirname}/package.json`);
 const appVersion = packageJson.version;
 
 const outFile = `${__dirname}/bin/tk-form-fields.${appVersion}.css`;
+const latestOutFile = `${__dirname}/bin/tk-form-fields.latest.css`;
 const comment = `/*!
  * tk-form-fields.css - https://github.com/xogroup/tk-form-fields
  * Version - ${appVersion}
@@ -28,16 +29,23 @@ function addVersion(opts) {
   });
 }
 
-function writeFile(css) {
+function outputCompiled(css) {
   const cleaned = new CleanCSS({ keepSpecialComments: 0 }).minify(css).styles;
-  fs.writeFile(outFile, cleaned, (err) => {
+
+  writeFile(outFile, cleaned);
+  writeFile(latestOutFile, cleaned);
+}
+
+function writeFile(output, css) {
+  fs.writeFile(output, css, (err) => {
     if (!err) {
-      addVersion({ filePath: outFile, comment });
+      addVersion({ filePath: output, comment });
     } else {
       console.log('There was a problem!', err);
     }
   });
 }
+
 
 sass.render({
   file: `${__dirname}/src/stylesheets/tk-form-fields.scss`,
@@ -45,7 +53,7 @@ sass.render({
   outFile,
 }, (err, result) => {
   if (!err) {
-    writeFile(result.css);
+    outputCompiled(result.css);
   } else {
     console.log('There was a problem!', err);
   }

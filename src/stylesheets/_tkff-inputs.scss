@@ -34,7 +34,7 @@
     transition: background-color 0.2s ease-out 1.5s;
 
     // adding new one
-    + label {
+    ~ label {
       color: $black;
       font-size: $font-size-xsmall;
       font-weight: 500;
