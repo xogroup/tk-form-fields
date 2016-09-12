@@ -4,6 +4,7 @@ const pug = require('pug');
 const src = `${__dirname}/src`;
 const docs = `${__dirname}/docs`;
 const ghpages = require('gh-pages');
+const version = require('./package.json').version;
 
 function writeFile(inFile, outFile) {
   return new Promise((resolve) => {
@@ -29,7 +30,7 @@ const cssPromise = sass.render({
 });
 
 const htmlPromise = writeFile(
-  pug.renderFile(`${src}/templates/index.pug`), `${docs}/index.html`
+  pug.renderFile(`${src}/templates/index.pug`, { version }), `${docs}/index.html`
 );
 
 Promise.all([cssPromise, htmlPromise]).then(() => {

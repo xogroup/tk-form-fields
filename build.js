@@ -29,13 +29,6 @@ function addVersion(opts) {
   });
 }
 
-function outputCompiled(css) {
-  const cleaned = new CleanCSS({ keepSpecialComments: 0 }).minify(css).styles;
-
-  writeFile(outFile, cleaned);
-  writeFile(latestOutFile, cleaned);
-}
-
 function writeFile(output, css) {
   fs.writeFile(output, css, (err) => {
     if (!err) {
@@ -46,6 +39,12 @@ function writeFile(output, css) {
   });
 }
 
+function outputCompiled(css) {
+  const cleaned = new CleanCSS({ keepSpecialComments: 0 }).minify(css).styles;
+
+  writeFile(outFile, cleaned);
+  writeFile(latestOutFile, cleaned);
+}
 
 sass.render({
   file: `${__dirname}/src/stylesheets/tk-form-fields.scss`,
