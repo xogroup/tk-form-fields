@@ -4,7 +4,7 @@
   "description": "This is HTML and styles to render the form fields pattern, as designed by Silvia",
   "main": "index.js",
   "scripts": {
-    "build": "node build.js",
+    "build": "./node_modules/.bin/webpack && node build.js",
     "build-docs": "node build_docs",
     "start": "node index.js",
     "test": "./test.sh"
@@ -43,6 +43,7 @@
     "stylelint-config-standard": "^11.0.0",
     "stylelint-declaration-use-variable": "^1.4.0",
     "stylelint-scss": "^1.2.1",
-    "uglify-js": "^2.7.0"
+    "uglify-js": "^2.7.0",
+    "webpack": "^1.13.2"
   }
 }
