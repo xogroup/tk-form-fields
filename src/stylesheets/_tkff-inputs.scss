@@ -56,31 +56,34 @@
   // default text input fields
   input:valid:not(:focus):not(:placeholder-shown) {
     background: $gray-2;
-    + label {
+    ~ label {
       font-size: $font-size-xsmall;
       font-weight: 500;
       top: 6px;
     }
   }
   // invalid text input fields, must be required
-  input.invalid:not(:placeholder-shown) {
+  input.invalid {
     background: $coral-tint-80;
     border: $coral-tint-80-border;
     transition: all 0.2s ease-out 1.5s;
-    + label {
-      font-size: $font-size-xsmall;
-      font-weight: 500;
-      top: 6px;
-    }
     ~ .requirements {
       max-height: 200px;
       padding: 5px $spacer-x 4px;
     }
   }
 
+  input:not(:placeholder-shown) {
+    ~ label {
+      font-size: $font-size-xsmall;
+      font-weight: 500;
+      top: 6px;
+    }
+  }
+
   // Firefox doesn't support (:placeholder-shown) at the moment
   @-moz-document url-prefix() {
-    input + label {
+    input ~ label {
       color: $black;
       font-size: $font-size-xsmall;
       font-weight: 500;
@@ -95,7 +98,7 @@
     background: $gray-1;
     border: $gray-1-border;
 
-    + label {
+    ~ label {
       color: $gray-3;
       text-decoration: line-through;
     }
