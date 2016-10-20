@@ -7,7 +7,7 @@
     "build": "./node_modules/.bin/webpack --config ./config/webpack.development.js && node build.js",
     "build-docs": "node build_docs",
     "build-dist": "./node_modules/.bin/webpack --config ./config/webpack.publish.js",
-    "prepublish": "npm run build-dist",
+    "prepublish": "npm run build-dist && node build.js",
     "start": "node index.js",
     "test": "./test.sh",
     "unit-test": "./node_modules/.bin/karma start --browsers PhantomJS",
