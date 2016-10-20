@@ -41,7 +41,9 @@ Cut a branch/fork, and make your changes in `src`.
 Make sure tests pass:
 
 ```
-$ npm test
+$ npm test # linters
+$ npm run unit-test # karma
+$ npm run test-all # all
 ```
 
 Uptick the version in `package.json` and in the docs in `src/templates/index.pug`.
