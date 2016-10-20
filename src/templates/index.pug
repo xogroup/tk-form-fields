@@ -29,6 +29,8 @@ html
             a#usage Usage
 
 
+          h4
+            | As a standalone package
           ol
             li
               | Download
@@ -42,6 +44,26 @@ html
                   app.use('/static', express.static(__dirname + '/vendor'));
                   ```
             li Then architect your form's markup, following the below demo as an example. So long as you're using the appropriate classes and HTML, all should be well!
+          h4
+            | As an npm package
+          ol
+            li Run
+              p
+                code npm install --save @xogroup/tk-form-fields
+            li Consume the following files:
+              ul
+                li
+                  code node_modules/@xogroup/tk-form-fields/dist/index.js
+                li
+                  code node_modules/@xogroup/tk-form-fields/bin/tk-form-fields.latest.css
+            li Initialize functionality
+              p
+                pre
+                  | // in a 'window' context
+                  | XO.FormFields.init();
+                  | //
+                  | // in a commonjs context
+                  | require('@xogroup/tk-form-fields').init();
 
       .row
         .col-md-4.col-md-offset-4
@@ -106,8 +128,8 @@ html
 
           p
             strong
-              | DO NOT modify the
-              code tk-form-fields.#{version}.css
+              | DO NOT modify the code in
+              | tk-form-fields.#{version}.css
               | directly!!!
             :markdown
               Instead, fork the [repo](https://github.com/xogroup/tk-form-fields),
