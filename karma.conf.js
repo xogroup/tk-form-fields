@@ -10,27 +10,27 @@ module.exports = (config) => {
     // list of files / patterns to load in the browser
     files: [{
       pattern: 'spec/test-index.js',
-      watched: false
+      watched: false,
     }],
     // list of files to exclude
     exclude: [],
     // preprocess matching files before serving them to the browser
     // available preprocessors: https://npmjs.org/browse/keyword/karma-preprocessor
     preprocessors: {
-      'spec/test-index.js': ['webpack']
+      'spec/test-index.js': ['webpack'],
     },
     webpack: {
       resolve: {
-        modulesDirectories: ['src/javascript', 'node_modules']
+        modulesDirectories: ['src/javascript', 'node_modules'],
       },
       module: { },
       watch: true,
       plugins: [
-        new webpack.DefinePlugin({ PACKAGE_VERSION: '\'test\'' })
-      ]
+        new webpack.DefinePlugin({ PACKAGE_VERSION: '\'test\'' }),
+      ],
     },
     webpackServer: {
-      noInfo: true
+      noInfo: true,
     },
     // test results reporter to use
     // possible values: 'dots', 'progress'
@@ -60,8 +60,8 @@ module.exports = (config) => {
     customLaunchers: {
       ChromeDebug: {
         base: 'Chrome',
-        flags: ['--auto-open-devtools-for-tabs']
-      }
-    }
+        flags: ['--auto-open-devtools-for-tabs'],
+      },
+    },
   });
 };

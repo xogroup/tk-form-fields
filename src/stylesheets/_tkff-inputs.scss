@@ -4,6 +4,10 @@
     -webkit-appearance: none;
     background-color: $gray-2;
     border: $gray-2-border;
+
+    // Fix firefox render error
+    box-shadow: none;
+
     color: $black;
     display: block;
     font-size: $font-size-medium;
@@ -63,7 +67,7 @@
     }
   }
   // invalid text input fields, must be required
-  input.invalid {
+  .invalid {
     background: $coral-tint-80;
     border: $coral-tint-80-border;
     transition: all 0.2s ease-out 1.5s;

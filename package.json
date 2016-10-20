@@ -1,6 +1,6 @@
 {
   "name": "tk-form-fields-pattern",
-  "version": "0.0.6",
+  "version": "1.0.0",
   "description": "This is HTML and styles to render the form fields pattern, as designed by Silvia",
   "main": "index.js",
   "scripts": {
@@ -8,7 +8,8 @@
     "build-docs": "node build_docs",
     "start": "node index.js",
     "test": "./test.sh",
-    "unit-test": "./node_modules/.bin/karma start --browsers PhantomJS"
+    "unit-test": "./node_modules/.bin/karma start --browsers PhantomJS",
+    "test-all": "npm test && npm run unit-test"
   },
   "repository": {
     "type": "git",
