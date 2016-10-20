@@ -50,11 +50,11 @@
     "stylelint-config-standard": "^11.0.0",
     "stylelint-declaration-use-variable": "^1.4.0",
     "stylelint-scss": "^1.2.1",
-    "trigger-event": "^1.0.3",
     "uglify-js": "^2.7.0",
     "webpack": "^1.13.2"
   },
   "dependencies": {
+    "array-find": "git+https://github.com/xogroup/array-find.git",
     "matches-selector-polyfill": "^1.0.0"
   }
 }

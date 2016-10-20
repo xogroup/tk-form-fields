@@ -21,7 +21,7 @@ module.exports = (config) => {
     },
     webpack: {
       resolve: {
-        modulesDirectories: ['src', 'node_modules']
+        modulesDirectories: ['src/javascript', 'node_modules']
       },
       module: { },
       watch: true,
