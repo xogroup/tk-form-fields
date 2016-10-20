@@ -15,5 +15,3 @@ function initializerHandler(event) {
 
   form.initialize(formForElement);
 };
-
-exports.init();
