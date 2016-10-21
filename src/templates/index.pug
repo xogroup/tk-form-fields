@@ -67,6 +67,11 @@ html
                   | //
                   | // in a commonjs context
                   | require('@xogroup/tk-form-fields-pattern').init();
+                  | // If you are working with a form element that is in memory and want to initialize
+                  | // it manually, run the following
+                  | XO.FormField.initializeForm(formElement);
+                  | // or
+                  | require('@xogroup/tk-form-fields-pattern').initializeForm(formElement);
 
       .row
         .col-md-4.col-md-offset-4
