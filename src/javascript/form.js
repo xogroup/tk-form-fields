@@ -5,6 +5,10 @@ var forEach = Array.prototype.forEach;
 exports.initialize = function initializeForm(formElement) {
   if(exports.isInitialized(formElement)) return;
 
+  // Add class incase this form is being manually initialized, in which case, we need to make sure
+  // that the styles are applied.
+  formElement.classList.add('tk-form-fields')
+
   var inputs = formElement.querySelectorAll('input');
 
   formElement.noValidate = true;
