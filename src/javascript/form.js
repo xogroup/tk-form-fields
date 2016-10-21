@@ -2,7 +2,7 @@ var delegate = require('./delegate');
 var find = require('array-find');
 var forEach = Array.prototype.forEach;
 
-exports.initialize = function initializeForm(formElement) {
+exports.initialize = function initialize(formElement) {
   if(exports.isInitialized(formElement)) return;
 
   // Add class incase this form is being manually initialized, in which case, we need to make sure
