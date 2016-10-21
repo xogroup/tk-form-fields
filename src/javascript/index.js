@@ -8,10 +8,8 @@ exports.init = function init() {
   delegate(document.body, 'click', delegatedSelectors, initializerHandler);
 };
 
+exports.initializeForm = form.initialize;
+
 function initializerHandler(event) {
-  var formForElement = form.forElement(event.target);
-
-  if(form.isInitialized(formForElement)) return;
-
-  form.initialize(formForElement);
+  form.initialize(form.forElement(event.target));
 };

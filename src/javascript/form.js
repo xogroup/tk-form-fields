@@ -3,6 +3,8 @@ var find = require('array-find');
 var forEach = Array.prototype.forEach;
 
 exports.initialize = function initializeForm(formElement) {
+  if(exports.isInitialized(formElement)) return;
+
   var inputs = formElement.querySelectorAll('input');
 
   formElement.noValidate = true;
@@ -16,7 +18,7 @@ exports.initialize = function initializeForm(formElement) {
   formElement.dataset.tkFormInitialized = true;
 };
 
-exports.isInitialized = function formIsInitialized(formElement) {
+exports.isInitialized = function IsInitialized(formElement) {
   return formElement.dataset.tkFormInitialized === true;
 };
 
