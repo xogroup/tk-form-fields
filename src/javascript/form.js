@@ -42,25 +42,15 @@ function bindOnSubmitValidation(form) {
 
 function bindReplaceDefaultBubble(field) {
   field.addEventListener('invalid', function (e) {
-    var inputElement = e.target;
+    e.target.classList.add('invalid');
     e.preventDefault();
-
-    toggleInvalid(inputElement);
   });
 }
 
 function bindValidationTrigger(field) {
   field.addEventListener('blur', function (e) {
-    var inputElement = e.target;
-    toggleInvalid(inputElement);
+    if (e.target.checkValidity()) {
+      e.target.classList.remove('invalid');
+    }
   });
 }
-
-function toggleInvalid(inputElement) {
-  if (inputElement.validity.valid) {
-    inputElement.classList.remove('invalid');
-  } else {
-    inputElement.classList.add('invalid');
-  }
-}
-
