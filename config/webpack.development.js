@@ -1,10 +1,13 @@
 const webpack = require('webpack');
-const packageJson = require('./package.json');
+const packageJson = require('../package.json');
+const path = require('path');
+
+const projectPath = path.resolve.bind(path, __dirname, '..');
 
 module.exports = {
-  entry: './src/javascript/index.js',
+  entry: projectPath('src', 'javascript', 'index.js'),
   output: {
-    path: `${__dirname}/public`,
+    path: projectPath('public'),
     filename: 'index.js',
     library: ['XO', 'FormFields'],
     libraryTarget: 'umd',
