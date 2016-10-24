@@ -46,11 +46,10 @@ describe('XO.FormFields.init', function () {
       describe('when fixing field', function () {
         beforeEach(function () {
           this.inputField.value = "test@xogroup.com";
-
           triggerEvent(this.inputField, 'blur', { bubbles: false });
         });
 
-        it('adds the invalid class to the field', function () {
+        it('removes the invalid class from the field', function () {
           expect(this.inputField.classList.contains('invalid')).toBe(false);
         });
       });
