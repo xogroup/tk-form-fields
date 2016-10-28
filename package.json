@@ -1,13 +1,17 @@
 {
-  "name": "tk-form-fields-pattern",
-  "version": "0.0.6",
+  "name": "@xogroup/tk-form-fields-pattern",
+  "version": "1.0.3",
   "description": "This is HTML and styles to render the form fields pattern, as designed by Silvia",
-  "main": "index.js",
+  "main": "dist/index.js",
   "scripts": {
-    "build": "node build.js",
+    "build": "./node_modules/.bin/webpack --config ./config/webpack.development.js && node build.js",
     "build-docs": "node build_docs",
+    "build-dist": "./node_modules/.bin/webpack --config ./config/webpack.publish.js",
+    "prepublish": "npm run build-dist && node build.js",
     "start": "node index.js",
-    "test": "./test.sh"
+    "test": "./test.sh",
+    "unit-test": "./node_modules/.bin/karma start --browsers PhantomJS",
+    "test-all": "npm test && npm run unit-test"
   },
   "repository": {
     "type": "git",
@@ -28,9 +32,16 @@
     "eslint-plugin-jsx-a11y": "^2.0.1",
     "eslint-plugin-react": "^5.2.2",
     "express": "^4.14.0",
+    "extend": "^3.0.0",
     "file-system": "^2.2.1",
     "gh-pages": "^0.11.0",
+    "jasmine-core": "^2.5.2",
     "jstransformer-markdown": "^1.1.0",
+    "karma": "^1.3.0",
+    "karma-jasmine": "^1.0.2",
+    "karma-mocha-reporter": "^2.2.0",
+    "karma-phantomjs-launcher": "^1.0.2",
+    "karma-webpack": "^1.8.0",
     "livereload": "^0.4.1",
     "node-sass": "^3.8.0",
     "node-sass-middleware": "^0.9.8",
@@ -43,6 +54,15 @@
     "stylelint-config-standard": "^11.0.0",
     "stylelint-declaration-use-variable": "^1.4.0",
     "stylelint-scss": "^1.2.1",
-    "uglify-js": "^2.7.0"
-  }
+    "uglify-js": "^2.7.0",
+    "webpack": "^1.13.2"
+  },
+  "dependencies": {
+    "array-find": "git+https://github.com/xogroup/array-find.git",
+    "matches-selector-polyfill": "^1.0.0"
+  },
+  "files": [
+    "dist/*",
+    "bin/*"
+  ]
 }

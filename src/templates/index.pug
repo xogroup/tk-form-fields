@@ -4,8 +4,11 @@ html
     link(href="//static.xoedge.com/patterns/css/fonts.css", rel="stylesheet")
     link(href="//static.xoedge.com/patterns/css/tk-bootstrap.4.css?v=4.3.4", rel="stylesheet")
     link(href="index.css", rel="stylesheet")
-
   body
+    script(src="index.js")
+    script XO.FormFields.init();
+
+
     .container-fluid
       .row
         .col-md-4.col-md-offset-4
@@ -29,9 +32,11 @@ html
             a#usage Usage
 
 
+          h4
+            | As a standalone package
           ol
             li
-              | Download 
+              | Download
               a(href=`https://github.com/xogroup/tk-form-fields/blob/master/bin/tk-form-fields.${version}.css`)
                 b tk-form-fields.#{version}.css
             li Place the file somewhere in your application that makes sense.
@@ -42,11 +47,37 @@ html
                   app.use('/static', express.static(__dirname + '/vendor'));
                   ```
             li Then architect your form's markup, following the below demo as an example. So long as you're using the appropriate classes and HTML, all should be well!
+          h4
+            | As an npm package
+          ol
+            li Run
+              p
+                code npm install --save @xogroup/tk-form-fields-pattern
+            li Consume the following files:
+              ul
+                li
+                  code node_modules/@xogroup/tk-form-fields/dist/index.js
+                li
+                  code node_modules/@xogroup/tk-form-fields/bin/tk-form-fields.latest.css
+            li Initialize functionality
+              p
+                pre
+                  | // in a 'window' context
+                  | XO.FormFields.init();
+                  | //
+                  | // in a commonjs context
+                  | require('@xogroup/tk-form-fields-pattern').init();
+                  | // If you are working with a form element that is in memory and want to initialize
+                  | // it manually, run the following
+                  | XO.FormField.initializeForm(formElement);
+                  | // or
+                  | require('@xogroup/tk-form-fields-pattern').initializeForm(formElement);
 
       .row
         .col-md-4.col-md-offset-4
           h2
             a#demo Demo
+
           form.tk-form-fields(action='#0')
             fieldset.row
               .col-xs-6
@@ -105,8 +136,8 @@ html
 
           p
             strong
-              | DO NOT modify the 
-              code tk-form-fields.#{version}.css 
+              | DO NOT modify the code in
+              | tk-form-fields.#{version}.css
               | directly!!!
             :markdown
               Instead, fork the [repo](https://github.com/xogroup/tk-form-fields),
@@ -117,3 +148,4 @@ html
             If you need to change things more urgently, override the css/html
             in your application's stylesheets and templates (eg, in a Rails app
             within `app/assets/application.css`).
+
