@@ -12,6 +12,7 @@ app.use(sass({
   dest: `${__dirname}/public`,
   debug: true,
   force: true,
+  includePaths: ['node_modules']
 }));
 app.use(express.static(`${__dirname}/public`));
 
