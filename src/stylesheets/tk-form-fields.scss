@@ -1,6 +1,5 @@
 @charset "utf-8";
 @import "variables";
-@import "utilities";
 
 @import '@sharedweb/tk-core-styles/dist/index';
 @import '@sharedweb/tk-typography/dist/index';
@@ -14,3 +13,14 @@
 @import "tkff-general-validations";
 @import "tkff-buttons";
 @import "tkff-textareas";
+
+@mixin tkff() {
+  .tk-form-fields {
+    @include tkff-buttons();
+    @include tkff-fieldsets();
+    @include tkff-requirements();
+    @include tkff-labels();
+    @include tkff-textarea();
+    @include tkff-input();
+  }
+}
