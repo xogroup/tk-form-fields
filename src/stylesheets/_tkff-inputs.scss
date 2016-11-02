@@ -1,6 +1,5 @@
 /* Base styling */
-
-@mixin tkff-input {
+@mixin tkff-inputs {
   input {
     -webkit-appearance: none;
     background-color: $gray-2;
@@ -17,7 +16,7 @@
     width: 100%;
   }
 
-/* DOM event/interaction styling */
+  /* DOM event/interaction styling */
   input:hover {
     border: $black-border;
     outline: $outline-reset;

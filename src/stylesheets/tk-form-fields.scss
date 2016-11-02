@@ -1,12 +1,11 @@
 @charset "utf-8";
 @import "variables";
-
+// External dependencies
 @import '@sharedweb/tk-core-styles/dist/index';
 @import '@sharedweb/tk-typography/dist/index';
 @import 'bootstrap-sass/assets/stylesheets/bootstrap/forms';
 @import 'bootstrap-sass/assets/stylesheets/bootstrap/buttons';
-
-/* Form fields partials */
+// Form fields partials
 @import "tkff-fieldsets";
 @import "tkff-labels";
 @import "tkff-inputs";
@@ -14,13 +13,13 @@
 @import "tkff-buttons";
 @import "tkff-textareas";
 
-@mixin tkff() {
+@mixin tkff {
   .tk-form-fields {
-    @include tkff-buttons();
-    @include tkff-fieldsets();
-    @include tkff-requirements();
-    @include tkff-labels();
-    @include tkff-textarea();
-    @include tkff-input();
+    @include tkff-buttons;
+    @include tkff-fieldsets;
+    @include tkff-requirements;
+    @include tkff-labels;
+    @include tkff-textarea;
+    @include tkff-inputs;
   }
 }
