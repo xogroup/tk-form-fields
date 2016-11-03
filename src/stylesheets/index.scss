@@ -2,6 +2,6 @@
 @import "tk-form-fields";
 @import "styleguide";
 
-body {
-  @include tkff;
+.tk-form-fields {
+  @extend %tk-form-fields;
 }
