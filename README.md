@@ -27,6 +27,7 @@ Install the development app:
 ```
 $ git clone git@github.com:xogroup/tk-form-fields.git
 $ cd tk-form-fields
+$ npm login # Log in with gemfury credentials for xogroup account
 $ npm install
 ```
 
