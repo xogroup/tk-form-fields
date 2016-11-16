@@ -16,12 +16,10 @@
   @import "tkff-buttons";
   @import "tkff-textareas";
 
-  .tk-form-fields {
-    @include tkff-buttons;
-    @include tkff-fieldsets;
-    @include tkff-requirements;
-    @include tkff-labels;
-    @include tkff-textarea;
-    @include tkff-inputs;
-  }
+  @include tkff-buttons;
+  @include tkff-fieldsets;
+  @include tkff-requirements;
+  @include tkff-labels;
+  @include tkff-textarea;
+  @include tkff-inputs;
 }
