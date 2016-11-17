@@ -1,8 +1,8 @@
 /* Base styling */
-@mixin tkff-inputs {
+@mixin tkff-inputs($base-color: $gray-2) {
   input {
     -webkit-appearance: none;
-    background-color: $gray-2;
+    background-color: $base-color;
     border: $gray-2-border;
 
     // Fix firefox render error
@@ -14,6 +14,8 @@
     font-weight: 400;
     padding: 20px $spacer-x 4px $spacer-x;
     width: 100%;
+
+    position: relative;
   }
 
   /* DOM event/interaction styling */
@@ -46,7 +48,7 @@
 
   // default text input fields
   input:valid:not(:focus):not(:placeholder-shown) {
-    background: $gray-2;
+    background: $base-color;
     ~ label {
       font-size: $font-size-xsmall;
       font-weight: 500;

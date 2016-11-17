@@ -2,7 +2,6 @@
 @import "tk-form-fields";
 @import "styleguide";
 
-
-.demo {
-  @extend %tk-form-fields;
+.field-container {
+  @extend %tk-field-container;
 }
