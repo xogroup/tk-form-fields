@@ -1,4 +1,4 @@
-.tk-form-fields {
+@mixin tkff-requirements() {
   .requirements {
     background-color: $coral-tint-30;
     color: $white;

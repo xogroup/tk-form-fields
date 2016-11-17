@@ -58,7 +58,8 @@
     "webpack": "^1.13.2"
   },
   "dependencies": {
-    "@sharedweb/tk-core-styles": "^1.2.2",
+    "@sharedweb/tk-colors": "^1.0.1",
+    "@sharedweb/tk-core-styles": "^1.2.5",
     "@sharedweb/tk-typography": "^1.1.2",
     "array-find": "git+https://github.com/xogroup/array-find.git",
     "bootstrap-sass": "^3.3.7",
@@ -66,6 +67,7 @@
   },
   "files": [
     "dist/*",
-    "bin/*"
+    "bin/*",
+    "src/stylesheets/*"
   ]
 }

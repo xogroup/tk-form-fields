@@ -1,4 +1,4 @@
-.tk-form-fields {
+@mixin tkff-buttons() {
   button,
   [type="submit"] {
     background: $coral-tint-20;
