@@ -38,7 +38,7 @@ function bindOnSubmitValidation(form) {
 
 function bindReplaceDefaultBubble(field) {
   field.addEventListener('invalid', function (e) {
-    e.target.classList.add('invalid');
+    e.target.classList.add('tk-form-fields__field--invalid');
     e.preventDefault();
   });
 }
@@ -46,7 +46,7 @@ function bindReplaceDefaultBubble(field) {
 function bindValidationTrigger(field) {
   field.addEventListener('blur', function (e) {
     if (e.target.checkValidity()) {
-      e.target.classList.remove('invalid');
+      e.target.classList.remove('tk-form-fields__field--invalid');
     }
   });
 }

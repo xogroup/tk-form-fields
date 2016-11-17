@@ -1,6 +1,14 @@
 %tk-field-container {
   position: relative;
 
+  .tk-form-fields__field-requirements {
+    @extend %tk-field-requirements;
+  }
+
+  label {
+    @extend %tk-field-label;
+  }
+
   input {
     @extend %tk-field;
 
@@ -16,10 +24,10 @@
       @extend %tk-field-label--is-focused;
     }
 
-    &.invalid {
+    &.tk-form-fields__field--invalid {
       @extend %tk-field--is-invalid;
 
-      ~ .requirements {
+      ~ .tk-form-fields__field-requirements {
         @extend %tk-field-requirements--is-shown;
       }
     }
@@ -27,14 +35,6 @@
     &:disabled ~ label {
       @extend %tk-field-label--is-disabled;
     }
-  }
-
-  label {
-    @extend %tk-field-label;
-  }
-
-  .requirements {
-    @extend %tk-field-requirements;
   }
 }
 
