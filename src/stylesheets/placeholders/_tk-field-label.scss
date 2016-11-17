@@ -22,6 +22,7 @@
 
 /* States */
 %tk-field-label--is-filled {
+  @extend %tk-field-label;
   font-size: $font-size-xsmall;
   font-weight: 500;
   top: 6px;
@@ -33,6 +34,17 @@
 }
 
 %tk-field-label--is-disabled {
+  @extend %tk-field-label;
   color: $gray-3;
   text-decoration: line-through;
+}
+
+%tk-field-label--for-textarea {
+  @extend %tk-field-label;
+  font-size: $spacer-x;
+  font-weight: 500;
+  left: 0;
+  top: 0;
+  padding-left: 10px;
+  padding-top: 10px;
 }
