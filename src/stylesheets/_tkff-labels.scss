@@ -1,4 +1,4 @@
-.tk-form-fields {
+@mixin tkff-labels {
   label {
     color: $gray-4;
     cursor: text;
