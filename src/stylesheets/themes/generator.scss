@@ -1,9 +1,9 @@
 @mixin tk-fields-theme($base-color) {
   .tk-form-fields__field-container {
-    @extend %tk-field-container-base;
+    @extend %tk-field-container;
 
     input {
-      background-color: $base-color;
+      @include tk-field-variation($base-color)
     }
   }
 

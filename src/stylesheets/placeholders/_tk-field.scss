@@ -47,3 +47,12 @@
   border: $coral-tint-80-border;
   transition: all 0.2s ease-out 1.5s;
 }
+
+/* Variations */
+@mixin tk-field-variation($base-color) {
+  background-color: $base-color;
+
+  &:valid:not(:focus):not(:placeholder-shown) {
+    background-color: $base-color;
+  }
+}
