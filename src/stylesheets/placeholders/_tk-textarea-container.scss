@@ -1,9 +1,4 @@
-// text area
-
 %tk-textarea-container {
-  @import 'variables';
-  @import 'tkff-labels';
-
   position: relative;
 
   @mixin tkff-placeholder {
@@ -13,7 +8,7 @@
   }
 
   label {
-    @extend %tk-form-label;
+    @extend %tk-field-label;
 
     font-size: $spacer-x;
     font-weight: 500;
@@ -29,7 +24,6 @@
 
   textarea {
     -webkit-appearance: none;
-    background: $gray-2;
     border: $gray-2-border;
     border-radius: $radius-reset;
     color: $black;

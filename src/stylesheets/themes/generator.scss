@@ -1,0 +1,21 @@
+@mixin tk-fields-theme($base-color) {
+  .tk-form-fields__field-container {
+    @extend %tk-field-container-base;
+
+    input {
+      background-color: $base-color;
+    }
+  }
+
+  .tk-form-fields__field-group {
+    @extend %tk-field-group;
+  }
+
+  .tk-form-fields__textarea-container {
+    @extend %tk-textarea-container;
+
+    textarea {
+      background-color: $base-color;
+    }
+  }
+}

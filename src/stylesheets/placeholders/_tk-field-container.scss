@@ -1,0 +1,40 @@
+%tk-field-container-base {
+  position: relative;
+
+  input {
+    @extend %tk-field;
+
+    &:not(:focus):not(:placeholder-shown) ~ label {
+      @extend %tk-field-label--is-filled;
+    }
+
+    &:not(:placeholder-shown) ~ label {
+      @extend %tk-field-label--is-filled;
+    }
+
+    &:focus ~ label {
+      @extend %tk-field-label--is-focused;
+    }
+
+    &.invalid {
+      @extend %tk-field--is-invalid;
+
+      ~ .requirements {
+        @extend %tk-field-requirements--is-shown;
+      }
+    }
+
+    &:disabled ~ label {
+      @extend %tk-field-label--is-disabled;
+    }
+  }
+
+  label {
+    @extend %tk-field-label;
+  }
+
+  .requirements {
+    @extend %tk-field-requirements;
+  }
+}
+

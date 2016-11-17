@@ -1,0 +1,15 @@
+%tk-field-requirements {
+  background-color: $coral-tint-30;
+  color: $white;
+  font-size: $font-size-small;
+  font-weight: 500;
+  max-height: 0;
+  overflow: hidden;
+  padding: 0 $spacer-x;
+  transition: all 0.2s ease-out 1.5s;
+}
+
+%tk-field-requirements--is-shown {
+  max-height: 200px;
+  padding: 5px $spacer-x 4px;
+}

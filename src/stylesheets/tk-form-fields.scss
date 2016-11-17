@@ -6,35 +6,14 @@
 @import 'bootstrap-sass/assets/stylesheets/bootstrap/forms';
 @import 'bootstrap-sass/assets/stylesheets/bootstrap/buttons';
 
-%tk-field-container {
-  // Form fields partials
-  @import 'variables';
-  @import "tkff-fieldsets";
-  @import "tkff-labels";
-  @import "tkff-inputs";
-  @import "tkff-general-validations";
-  @import "tkff-textareas";
+@import 'variables';
+@import 'placeholders';
+@import 'themes/generator';
 
-  @include tkff-fieldsets;
-  @include tkff-requirements;
-  @include tkff-labels;
-  @include tkff-textarea;
-  @include tkff-inputs;
-
-  position: relative;
+%tk-form-fields--default {
+  @include tk-fields-theme($gray-2);
 }
 
-%tk-field-container--light {
-  @extend %tk-field-container;
-  @import 'variables';
-  @import "tkff-inputs";
-
-  @include tkff-inputs($base-color: $white);
-}
-
-%tk-buttons {
-  @import "variables";
-  @import "tkff-buttons";
-
-  @include tkff-buttons;
+%tk-form-fields--light {
+  @include tk-fields-theme($white);
 }
