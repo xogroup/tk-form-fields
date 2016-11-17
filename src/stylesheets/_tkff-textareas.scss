@@ -19,9 +19,11 @@
     right: 11px;
     top: 1px;
   }
+
   label + textarea {
     padding: 26px $spacer-x 1px;
   }
+
   textarea {
     -webkit-appearance: none;
     background: $gray-2;

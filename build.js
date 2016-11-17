@@ -49,6 +49,7 @@ function outputCompiled(css) {
 sass.render({
   file: `${__dirname}/src/stylesheets/tk-form-fields.scss`,
   outputStyle: 'compressed',
+  includePaths: ['node_modules'],
   outFile,
 }, (err, result) => {
   if (!err) {
