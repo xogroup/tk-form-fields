@@ -31,10 +31,6 @@
     }
   }
 
-  &:valid:not(:focus):not(:placeholder-shown) {
-    background: $gray-2;
-  }
-
   &:disabled {
     background: $gray-1;
     border: $gray-1-border;
