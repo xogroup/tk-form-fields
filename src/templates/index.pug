@@ -76,19 +76,7 @@ html
           h2
             a#demo Demo
 
-          form(action='#0').light
-            fieldset.row
-              .col-xs-6
-                .tk-form-fields__field-container
-                  input#first_name(type='text', name='first_name', required='', placeholder=' ')
-                  label(for='first_name') First Name
-
-              .col-xs-6
-                .tk-form-fields__field-container
-                  input#last_name(type='text', name='last_name', required='', placeholder=' ')
-                  label(for='last_name') Last Name
-
-          form(action='#0').default
+          form(action='#0').default-form-example
             fieldset.row.tk-form-fields__field-group
               .col-xs-6
                 .tk-form-fields__field-container
@@ -109,14 +97,14 @@ html
                 .tk-form-fields__field-container
                   input#email(type='email', name='email', required='', placeholder=' ')
                   label(for='email') Email Address
-                  .requirements
+                  .tk-form-fields__field-requirements
                     | Must be a valid email address.
             .row
               fieldset.col-xs-12.tk-form-fields__field-group
                 .tk-form-fields__field-container
                   input#password(type='password', name='password', required='', placeholder=' ', pattern='(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,}')
                   label(for='password') Password
-                  .requirements
+                  .tk-form-fields__field-requirements
                     | Your password must be at least 6 characters as well as contain at least one uppercase, one lowercase, and one number.
             .row
               fieldset.col-xs-12.tk-form-fields__field-group

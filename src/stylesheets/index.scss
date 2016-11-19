@@ -2,10 +2,10 @@
 @import "tk-form-fields";
 @import "styleguide";
 
-form.light {
+.light-form-example {
   @extend %tk-form-fields--light;
 }
 
-form.default {
+.default-form-example {
   @extend %tk-form-fields--default;
 }
