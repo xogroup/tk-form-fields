@@ -61,7 +61,6 @@
     "@sharedweb/tk-buttons": "^2.0.0-3",
     "@sharedweb/tk-colors": "^1.0.1",
     "@sharedweb/tk-core-styles": "^1.2.5",
-    "@sharedweb/tk-typography": "^1.1.2",
     "array-find": "git+https://github.com/xogroup/array-find.git",
     "bootstrap-sass": "^3.3.7",
     "matches-selector-polyfill": "^1.0.0"
