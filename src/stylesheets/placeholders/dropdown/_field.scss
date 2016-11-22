@@ -1,5 +1,12 @@
 %tk-dropdown__field {
   @extend %tk-abstract-field;
   padding: 10px 10px;
+  height: 51px;
   position: relative;
+
+  &::after {
+    content: attr(data-selected);
+    position: absolute;
+    margin-top: 10px;
+  }
 }

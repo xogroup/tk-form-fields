@@ -4,10 +4,6 @@
     @extend %tk-dropdown__placeholder;
   }
 
-  .tk-dropdown__field {
-    @extend %tk-dropdown__field;
-  }
-
   .tk-dropdown__list-container {
     @extend %tk-dropdown__list-container;
   }
@@ -28,9 +24,24 @@
     @extend %tk-dropdown__caret--is-not-focused;
   }
 
+  .tk-dropdown__field {
+    @extend %tk-dropdown__field;
+  }
+
+  .tk-dropdown__field[data-selected] {
+    .tk-dropdown__placeholder {
+      @extend %tk-dropdown__placeholder--is-filled;
+    }
+  }
+
   .tk-dropdown--is-focused {
-    .tk-dropdown__label {
+    .tk-dropdown__field {
       @extend %tk-abstract-field--is-focused;
+    }
+
+
+    .tk-dropdown__placeholder {
+      @extend %tk-dropdown__placeholder--is-focused;
     }
 
     .tk-dropdown__caret {
