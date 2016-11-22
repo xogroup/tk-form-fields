@@ -1,7 +1,5 @@
-%tk-dropdown__label {
+%tk-dropdown__field {
   @extend %tk-abstract-field;
-  @extend %__tk-field-label;
-
   padding: 10px 10px;
   position: relative;
 }

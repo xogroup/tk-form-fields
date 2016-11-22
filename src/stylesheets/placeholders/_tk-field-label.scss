@@ -1,17 +1,15 @@
-%__tk-field-label {
-  color: $gray-55;
-  font-size: $font-size-medium;
-  font-weight: 300;
-  cursor: text;
+%tk-field-label-as-placeholder {
+  position: absolute;
+  left: 0;
+  top: 0;
 }
 
 %tk-field-label {
-  @extend %__tk-field-label;
-  transition: all 0.2s ease-out;
+  @extend %tk-field-label-as-placeholder;
+  @extend %tk-abstract-placeholder;
 
-  left: 10px;
-  position: absolute;
-  top: 14px;
+  margin-left: 10px;
+  margin-top: 14px;
 
   // Firefox doesn't support (:placeholder-shown) at the moment
   @-moz-document url-prefix() {
@@ -21,35 +19,23 @@
     color: $black;
     font-size: $font-size-xsmall;
     font-weight: 500;
-    top: 6px;
+    margin-top: 6px;
   }
 }
 
-/* States */
 %tk-field-label--is-filled {
-  @extend %tk-field-label;
-  font-size: $font-size-xsmall;
-  font-weight: 500;
-  top: 6px;
+  @extend %tk-abstract-placeholder--is-filled;
+  margin-top: 6px;
 }
 
 %tk-field-label--is-focused {
-  @extend %tk-field-label--is-filled;
-  color: $black;
-}
-
-%tk-field-label--is-disabled {
-  @extend %tk-field-label;
-  color: $gray-3;
-  text-decoration: line-through;
+  @extend %tk-abstract-placeholder--is-focused;
+  margin-top: 6px;
 }
 
 %tk-field-label--for-textarea {
-  @extend %tk-field-label;
-  font-size: $spacer-x;
-  font-weight: 500;
-  left: 0;
-  top: 0;
-  padding-left: 10px;
-  padding-top: 10px;
+  @extend %tk-field-label-as-placeholder;
+  @extend %tk-abstract-placeholder--is-filled;
+  margin-left: 10px;
+  margin-top: 10px;
 }

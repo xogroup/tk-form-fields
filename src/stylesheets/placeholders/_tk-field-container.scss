@@ -13,7 +13,7 @@
     @extend %tk-field;
 
     &:not(:focus):not(:placeholder-shown) ~ label {
-      @extend %tk-field-label--is-filled;
+      @extend %tk-abstract-placeholder--is-filled;
     }
 
     &:not(:placeholder-shown) ~ label {
@@ -33,7 +33,7 @@
     }
 
     &:disabled ~ label {
-      @extend %tk-field-label--is-disabled;
+      @extend %tk-abstract-placeholder--is-disabled;
     }
   }
 }

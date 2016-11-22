@@ -1,0 +1,25 @@
+%tk-abstract-placeholder {
+  color: $gray-55;
+  font-size: $font-size-medium;
+  font-weight: 300;
+  cursor: text;
+  transition: all 0.2s ease-out;
+}
+
+%tk-abstract-placeholder--is-filled {
+  @extend %tk-abstract-placeholder;
+
+  font-size: $font-size-xsmall;
+  font-weight: 500;
+}
+
+%tk-abstract-placeholder--is-focused {
+  @extend %tk-abstract-placeholder--is-filled;
+  color: $black;
+}
+
+%tk-abstract-placeholder--is-disabled {
+  @extend %tk-abstract-placeholder;
+  color: $gray-3;
+  text-decoration: line-through;
+}

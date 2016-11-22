@@ -77,51 +77,52 @@ html
             a#demo Demo
 
           form(action='#0').default-form-example
-            fieldset.row.tk-form-fields__field-group
+            fieldset.row.tk-field__group
               .col-xs-6
-                .tk-form-fields__field-container
+                .tk-field__container
                   input#first_name(type='text', name='first_name', required='', placeholder=' ')
                   label(for='first_name') First Name
 
               .col-xs-6
-                .tk-form-fields__field-container
+                .tk-field__container
                   input#last_name(type='text', name='last_name', required='', placeholder=' ')
                   label(for='last_name') Last Name
             .row
-              fieldset.col-xs-12.tk-form-fields__field-group
-                .tk-form-fields__field-container
+              fieldset.col-xs-12.tk-field__group
+                .tk-field__container
                   input#nickname(type='text', name='nickname', placeholder=' ')
                   label(for='nickname') Nickname
             .row
-              fieldset.col-xs-12.tk-form-fields__field-group
-                .tk-form-fields__field-container
+              fieldset.col-xs-12.tk-field__group
+                .tk-field__container
                   input#email(type='email', name='email', required='', placeholder=' ')
                   label(for='email') Email Address
                   .tk-form-fields__field-requirements
                     | Must be a valid email address.
             .row
-              fieldset.col-xs-12.tk-form-fields__field-group
-                .tk-form-fields__field-container
+              fieldset.col-xs-12.tk-field__group
+                .tk-field__container
                   input#password(type='password', name='password', required='', placeholder=' ', pattern='(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,}')
                   label(for='password') Password
                   .tk-form-fields__field-requirements
                     | Your password must be at least 6 characters as well as contain at least one uppercase, one lowercase, and one number.
             .row
-              fieldset.col-xs-12.tk-form-fields__field-group
-                .tk-form-fields__field-container
+              fieldset.col-xs-12.tk-field__group
+                .tk-field__container
                   input#tel(type='tel', name='tel', required='', placeholder=' ')
                   label(for='tel') Phone Number
             .row
-              fieldset.col-xs-12.tk-form-fields__field-group
-                .tk-form-fields__field-container
+              fieldset.col-xs-12.tk-field__group
+                .tk-field__container
                   input#guest_count(type='number', name='guest_count', placeholder=' ')
                   label(for='guest_count') Guest Count
 
             .row
-              fieldset.col-xs-12.tk-form-fields__field-group
+              fieldset.col-xs-12.tk-field__group
                 .tk-dropdown
-                  .tk-dropdown__label Season
-                    span.tk-dropdown__caret
+                  .tk-dropdown__field
+                    .tk-dropdown__placeholder Season
+                      span.tk-dropdown__caret
                   .tk-dropdown__list-container
                     ul.tk-dropdown__list#season(type='select', name='Season' role="dropdown")
                       li.tk-dropdown__item--is-focused(data-value="Winter") Winter
@@ -130,23 +131,23 @@ html
                       li.tk-dropdown__item(data-value="Fall") Fall
 
             .row
-              fieldset.col-xs-12.tk-form-fields__field-group
-                .tk-form-fields__field-container
+              fieldset.col-xs-12.tk-field__group
+                .tk-field__container
                   input#ww_url(type='url', name='ww_url', required='', placeholder=' ')
                   label(for='ww_url') Wedding Website URL
             .row
-              fieldset.col-xs-12.tk-form-fields__field-group
-                .tk-form-fields__field-container
+              fieldset.col-xs-12.tk-field__group
+                .tk-field__container
                   input#hint(type='text', name='hint', disabled='', placeholder=' ')
                   label(for='nickname') Hint
             .row
-              fieldset.col-xs-12.tk-form-fields__field-group
-                .tk-form-fields__textarea-container
+              fieldset.col-xs-12.tk-field__group
+                .tk-textarea__container
                   label(for='optional') Optional
                   textarea#optional(rows='5', name='optional', placeholder='Example note: Hi! Thank you so much for inviting us to your wedding. See you soon!')
             .row
-              fieldset.col-xs-12.tk-form-fields__field-group
-                .tk-form-fields__textarea-container
+              fieldset.col-xs-12.tk-field__group
+                .tk-textarea__container
                   textarea#optional_2(rows='5', name='optional_2', placeholder='Another really long note.')
             .row
               .col-xs-12

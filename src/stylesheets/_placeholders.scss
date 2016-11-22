@@ -7,8 +7,10 @@
 @import 'placeholders/tk-textarea';
 
 @import 'placeholders/abstract/field';
+@import 'placeholders/abstract/placeholder';
 
-@import 'placeholders/dropdown/label';
+@import 'placeholders/dropdown/field';
+@import 'placeholders/dropdown/placeholder';
 @import 'placeholders/dropdown/list-container';
 @import 'placeholders/dropdown/list';
 @import 'placeholders/dropdown/list-item';
