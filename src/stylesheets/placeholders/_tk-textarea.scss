@@ -15,6 +15,11 @@
     outline: $outline-reset;
   }
 
+  &:hover {
+    border: $black-border;
+    outline: $outline-reset;
+  }
+
   &::-moz-placeholder,
   &::-ms-input-placeholder,
   &::-webkit-input-placeholder {

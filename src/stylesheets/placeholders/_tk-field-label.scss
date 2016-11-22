@@ -1,12 +1,17 @@
-%tk-field-label {
-  color: $gray-4;
-  cursor: text;
+%__tk-field-label {
+  color: $gray-55;
   font-size: $font-size-medium;
   font-weight: 300;
+  cursor: text;
+}
+
+%tk-field-label {
+  @extend %__tk-field-label;
+  transition: all 0.2s ease-out;
+
   left: 10px;
   position: absolute;
   top: 14px;
-  transition: all 0.2s ease-out;
 
   // Firefox doesn't support (:placeholder-shown) at the moment
   @-moz-document url-prefix() {

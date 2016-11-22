@@ -1,0 +1,18 @@
+%tk-dropdown__list-item {
+  padding: 10px;
+  font-size: $font-size-medium;
+}
+
+%tk-dropdown__list-item--default {
+  @extend %tk-dropdown__list-item;
+  color: $gray-55;
+
+  &:hover {
+    color: $black;
+  }
+}
+
+%tk-dropdown__list-item--is-focused {
+  @extend %tk-dropdown__list-item;
+  color: $black;
+}

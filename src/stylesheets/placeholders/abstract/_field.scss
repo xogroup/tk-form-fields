@@ -1,0 +1,18 @@
+%tk-abstract-field {
+  border: $gray-2-border;
+
+  // Fix firefox render error
+  box-shadow: none;
+
+  display: block;
+  font-size: $font-size-medium;
+
+  &:hover {
+    @extend %tk-abstract-field--is-focused;
+  }
+}
+
+%tk-abstract-field--is-focused {
+  border: $black-border;
+  outline: $outline-reset;
+}

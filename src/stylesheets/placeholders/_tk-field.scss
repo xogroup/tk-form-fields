@@ -1,28 +1,15 @@
 %tk-field {
+  @extend %tk-abstract-field;
+
   -webkit-appearance: none;
-  border: $gray-2-border;
-
-  // Fix firefox render error
-  box-shadow: none;
-
-  color: $black;
-  display: block;
-  font-size: $font-size-medium;
-  font-weight: 400;
   padding: 20px $spacer-x 4px $spacer-x;
+
   width: 100%;
 
   position: relative;
 
   &:focus {
-    border: $black-border;
-    outline: $outline-reset;
-    transition: background-color 0.2s ease-out 1.5s;
-  }
-
-  &:hover {
-    border: $black-border;
-    outline: $outline-reset;
+    @extend %tk-abstract-field--is-focused;
   }
 
   @media only screen and (max-width: $narrow) {
@@ -42,13 +29,4 @@
   background: $coral-tint-80;
   border: $coral-tint-80-border;
   transition: all 0.2s ease-out 1.5s;
-}
-
-/* Variations */
-@mixin tk-field-variation($base-color) {
-  background-color: $base-color;
-
-  &:valid:not(:focus):not(:placeholder-shown) {
-    background-color: $base-color;
-  }
 }

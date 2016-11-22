@@ -116,6 +116,19 @@ html
                 .tk-form-fields__field-container
                   input#guest_count(type='number', name='guest_count', placeholder=' ')
                   label(for='guest_count') Guest Count
+
+            .row
+              fieldset.col-xs-12.tk-form-fields__field-group
+                .tk-dropdown
+                  .tk-dropdown__label Season
+                    span.tk-dropdown__caret
+                  .tk-dropdown__list-container
+                    ul.tk-dropdown__list#season(type='select', name='Season' role="dropdown")
+                      li.tk-dropdown__item--is-focused(data-value="Winter") Winter
+                      li.tk-dropdown__item(data-value="Spring") Spring
+                      li.tk-dropdown__item(data-value="Summer") Summer
+                      li.tk-dropdown__item(data-value="Fall") Fall
+
             .row
               fieldset.col-xs-12.tk-form-fields__field-group
                 .tk-form-fields__field-container

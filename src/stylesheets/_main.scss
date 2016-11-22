@@ -1,0 +1,63 @@
+/* These are the main exported classes */
+%tk-form-fields {
+  .tk-dropdown__label {
+    @extend %tk-dropdown__label;
+  }
+
+  .tk-dropdown__list-container {
+    @extend %tk-dropdown__list-container;
+  }
+
+  .tk-dropdown__list {
+    @extend %tk-dropdown__list;
+  }
+
+  .tk-dropdown__item {
+    @extend %tk-dropdown__list-item--default;
+  }
+
+  .tk-dropdown__item--is-focused {
+    @extend %tk-dropdown__list-item--is-focused;
+  }
+
+  .tk-dropdown__caret {
+    @extend %tk-dropdown__caret--is-not-focused;
+  }
+
+  .tk-dropdown--is-focused {
+    .tk-dropdown__label {
+      @extend %tk-abstract-field--is-focused;
+    }
+
+    .tk-dropdown__caret {
+      @extend %tk-dropdown__caret--is-focused;
+    }
+
+    .tk-dropdown__list {
+      @extend %tk-dropdown__list--is-focused;
+    }
+  }
+
+  .tk-form-fields__textarea-container {
+    @extend %tk-textarea-container;
+  }
+
+  .tk-form-fields__field-container {
+    /* Some additional classes are defined in %tk-field-container*/
+    @extend %tk-field-container;
+  }
+
+  .tk-form-fields__field-group {
+    @extend %tk-field-group;
+  }
+}
+
+%tk-form-fields--default {
+  @extend %tk-form-fields;
+  @include tk-form-fields-theme($gray-2);
+}
+
+%tk-form-fields--light {
+  @extend %tk-form-fields;
+  @include tk-form-fields-theme($white);
+}
