@@ -1,7 +1,7 @@
 %tk-field-container {
   position: relative;
 
-  .tk-form-fields__field-requirements {
+  .tk-field__requirements {
     @extend %tk-field-requirements;
   }
 
@@ -24,10 +24,10 @@
       @extend %tk-field-label--is-focused;
     }
 
-    &.tk-form-fields__field--invalid {
+    &.tk-field--invalid {
       @extend %tk-field--is-invalid;
 
-      ~ .tk-form-fields__field-requirements {
+      ~ .tk-field__requirements {
         @extend %tk-field-requirements--is-shown;
       }
     }
