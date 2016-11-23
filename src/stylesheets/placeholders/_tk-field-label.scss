@@ -1,30 +1,51 @@
-%tk-field-label-as-placeholder {
+%tk-field__label-as-placeholder {
   position: absolute;
   left: 0;
   top: 0;
 }
 
-%tk-field-label {
-  @extend %tk-field-label-as-placeholder;
-  @extend %tk-abstract-placeholder;
+%tk-field__label {
+  @extend %tk-field__label-as-placeholder;
 
   margin-left: 10px;
   margin-top: 14px;
+  cursor: text;
+  color: $gray-55;
+  font-size: $font-size-medium;
+  font-weight: 300;
+  transition: all 0.2s ease-out;
+
+  // Firefox doesn't support (:placeholder-shown) at the moment
+  @-moz-document url-prefix() {
+    // This is the same as %tk-field-label--is-focused
+    // Extending doesn't workin the queries
+    // @extend %tk-field-label--is-focused
+    color: $black;
+    font-size: $font-size-xsmall;
+    font-weight: 500;
+    margin-top: 6px;
+  }
+
 }
 
-%tk-field-label--is-filled {
-  @extend %tk-abstract-placeholder--is-filled;
+%tk-field__label--small {
+  font-size: $font-size-xsmall;
+  font-weight: 500;
   margin-top: 6px;
 }
 
-%tk-field-label--is-focused {
-  @extend %tk-abstract-placeholder--is-focused;
-  margin-top: 6px;
+%tk-field__label--is-focused {
+  color: $black;
 }
 
-%tk-field-label--for-textarea {
-  @extend %tk-field-label-as-placeholder;
-  @extend %tk-abstract-placeholder--is-filled;
+%tk-field__label--for-textarea {
+  @extend %tk-field__label-as-placeholder;
+  @extend %tk-field__label--small;
   margin-left: 10px;
   margin-top: 10px;
+}
+
+%tk-field__label--is-disabled {
+  color: $gray-3;
+  text-decoration: line-through;
 }

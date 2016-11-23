@@ -2,14 +2,21 @@
   @extend %tk-abstract-field;
 
   -webkit-appearance: none;
+  border: $gray-2-border;
+  // Fix firefox render error
+  box-shadow: none;
   padding: 20px $spacer-x 4px $spacer-x;
-
   width: 100%;
-
   position: relative;
+  display: block;
+  font-size: $font-size-medium;
+
+  &:hover {
+    @extend %tk-field--is-focused;
+  }
 
   &:focus {
-    @extend %tk-abstract-field--is-focused;
+    @extend %tk-field--is-focused;
   }
 
   @media only screen and (max-width: $narrow) {
@@ -19,8 +26,7 @@
   }
 
   &:disabled {
-    background: $gray-1;
-    border: $gray-1-border;
+    @extend %tk-field--is-disabled;
   }
 }
 
@@ -29,4 +35,14 @@
   background: $coral-tint-80;
   border: $coral-tint-80-border;
   transition: all 0.2s ease-out 1.5s;
+}
+
+%tk-field--is-focused {
+  border: $black-border;
+  outline: $outline-reset;
+}
+
+%tk-field--is-disabled {
+  background: $gray-1;
+  border: $gray-1-border;
 }

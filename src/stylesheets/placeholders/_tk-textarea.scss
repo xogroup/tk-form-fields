@@ -11,13 +11,11 @@
   width: 100%;
 
   &:focus {
-    border: $black-border;
-    outline: $outline-reset;
+    @extend %tk-field--is-focused;
   }
 
   &:hover {
-    border: $black-border;
-    outline: $outline-reset;
+    @extend %tk-field--is-focused;
   }
 
   &::-moz-placeholder,
@@ -27,8 +25,12 @@
   }
 }
 
+%tk-textarea--with-label {
+  padding: 26px $spacer-x 1px;
+}
+
 %tk-textarea__placeholder {
-  color: $gray-4;
+  color: $gray-55;
   font-size: $font-size-medium;
   font-weight: 300;
 }

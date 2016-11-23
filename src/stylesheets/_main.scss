@@ -29,20 +29,20 @@
   }
 
   .tk-textarea__container {
-    @extend %tk-textarea-container;
+    @extend %tk-textarea__container;
   }
 
   .tk-field__container {
     /* Some additional classes are defined in %tk-field-container*/
-    @extend %tk-field-container;
+    @extend %tk-field__container;
   }
 
   .tk-field__requirements {
-    @extend %tk-field-requirements;
+    @extend %tk-field__requirements;
   }
 
   .tk-field__group {
-    @extend %tk-field-group;
+    @extend %tk-field__group;
   }
 }
 
