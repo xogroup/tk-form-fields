@@ -51,7 +51,7 @@
   @include tk-form-fields-theme($gray-2);
 }
 
-%tk-form-fields--light {
+%tk-form-fields--white {
   @extend %tk-form-fields;
   @include tk-form-fields-theme($white);
 }

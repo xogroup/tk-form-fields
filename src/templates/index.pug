@@ -2,7 +2,7 @@ html
   head
     title The Knot Form Fields #{version}
     link(href="index.css", rel="stylesheet")
-  body
+  body.default-form-example
     script(src="index.js")
     script XO.FormFields.init('form');
 
@@ -75,7 +75,9 @@ html
           h2
             a#demo Demo
 
-          form(action='#0').default-form-example
+          form(action='#0').form-demo
+            a.tk-button(href="#", data-toggle-theme="true")
+              | Change Form Theme
             fieldset.row.tk-field__group
               .col-xs-6
                 .tk-field__container
@@ -175,4 +177,15 @@ html
             If you need to change things more urgently, override the css/html
             in your application's stylesheets and templates (eg, in a Rails app
             within `app/assets/application.css`).
+
+    script
+      | document.querySelector('[data-toggle-theme]').addEventListener('click', function (e) {
+      |   e.preventDefault();
+      |   var whiteForm = document.querySelector('.white-form-example') || document.createElement('div');
+      |   var defaultForm = document.querySelector('.default-form-example') || document.createElement('div');;
+      |   whiteForm.classList.remove('white-form-example');
+      |   defaultForm.classList.remove('default-form-example');
+      |   whiteForm.classList.add('default-form-example');
+      |   defaultForm.classList.add('white-form-example');
+      | });
 

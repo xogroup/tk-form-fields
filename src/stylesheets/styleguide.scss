@@ -24,12 +24,18 @@ h2 a {
   }
 }
 
-.light-form-example {
-  @extend %tk-form-fields--light;
-  @extend %tk-buttons;
+.white-form-example {
+  background-color: $lilac-tint-80;
+  .form-demo {
+    @extend %tk-form-fields--white;
+    @extend %tk-buttons;
+  }
 }
 
 .default-form-example {
-  @extend %tk-form-fields--default;
-  @extend %tk-buttons;
+  background-color: $white;
+  .form-demo {
+    @extend %tk-form-fields--default;
+    @extend %tk-buttons;
+  }
 }
