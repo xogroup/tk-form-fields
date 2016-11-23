@@ -2,6 +2,7 @@
   padding: 10px;
   font-size: $font-size-medium;
   cursor: pointer;
+  position: relative;
 }
 
 %tk-dropdown__list-item--default {
@@ -14,7 +15,6 @@
 }
 
 %tk-dropdown__list-item--is-focused {
-  @extend %tk-dropdown__list-item;
   background-color: $gray-90;
   color: $black;
 

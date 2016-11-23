@@ -22,12 +22,6 @@ exports.isInitialized = function IsInitialized(formElement) {
   return formElement.dataset.tkFormInitialized === true;
 };
 
-exports.forElement = function forElement(element, formSelector) {
-  return find(document.body.querySelectorAll(formSelector), function (form) {
-    return form.contains(element);
-  });
-}
-
 function bindOnSubmitValidation(form) {
   form.addEventListener('submit', function (e) {
     if(!e.target.checkValidity()) {

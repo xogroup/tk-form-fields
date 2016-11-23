@@ -1,5 +1,7 @@
+var dropdown = require('./dropdown');
 var form = require('./form');
 var delegate = require('./delegate');
+var findParent = require('./find-parent');
 
 exports.VERSION = PACKAGE_VERSION;
 exports.init = function init(formSelector) {
@@ -10,12 +12,13 @@ exports.init = function init(formSelector) {
   ].join(',');
 
   delegate(document.body, 'click', delegatedSelectors, generateInitializerHandler(formSelector));
+  dropdown.initialize(formSelector);
 };
 
 exports.initializeForm = form.initialize;
 
 function generateInitializerHandler(formSelector) {
   return function initializerHandler(event) {
-    form.initialize(form.forElement(event.target, formSelector));
+    form.initialize(findParent(event.target, formSelector));
   };
 }
