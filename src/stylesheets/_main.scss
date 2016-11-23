@@ -1,9 +1,5 @@
 /* These are the main exported classes */
 %tk-form-fields {
-  .tk-dropdown__placeholder {
-    @extend %tk-dropdown__placeholder;
-  }
-
   .tk-dropdown__list-container {
     @extend %tk-dropdown__list-container;
   }
@@ -29,7 +25,7 @@
   }
 
   .tk-dropdown__container {
-    @extend %tk-dropdown__field;
+    @extend %tk-dropdown__container;
   }
 
   .tk-textarea__container {
@@ -39,6 +35,10 @@
   .tk-field__container {
     /* Some additional classes are defined in %tk-field-container*/
     @extend %tk-field-container;
+  }
+
+  .tk-field__requirements {
+    @extend %tk-field-requirements;
   }
 
   .tk-field__group {

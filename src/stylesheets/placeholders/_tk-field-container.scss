@@ -1,10 +1,6 @@
 %tk-field-container {
   position: relative;
 
-  .tk-field__requirements {
-    @extend %tk-field-requirements;
-  }
-
   label {
     @extend %tk-field-label;
   }
