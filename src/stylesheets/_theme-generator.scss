@@ -1,4 +1,4 @@
-@mixin tk-form-fields-theme($base-color) {
+@mixin tk-form-fields-theme($base-color, $accent-color) {
   %tk-dropdown__list {
     background-color: $base-color;
   }
@@ -9,5 +9,9 @@
 
   %tk-textarea {
     background-color: $base-color;
+  }
+
+  %tk-dropdown__list-item--is-focused {
+    background-color: $accent-color;
   }
 }
