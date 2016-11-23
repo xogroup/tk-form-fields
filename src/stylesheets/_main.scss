@@ -20,6 +20,10 @@
     @extend %tk-dropdown__list-item--is-focused;
   }
 
+  .tk-dropdown__item__check {
+    @extend %tk-dropdown__item__check;
+  }
+
   .tk-dropdown__caret {
     @extend %tk-dropdown__caret--is-not-focused;
   }
