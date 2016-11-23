@@ -1,6 +1,4 @@
 %tk-field {
-  @extend %tk-abstract-field;
-
   -webkit-appearance: none;
   border: $gray-2-border;
   // Fix firefox render error
