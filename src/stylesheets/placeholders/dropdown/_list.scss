@@ -1,0 +1,20 @@
+%tk-dropdown__list {
+  @extend %ul_reset;
+
+  /* Dropdown is hiddent by default */
+  display: none;
+
+  position: absolute;
+  top: 0;
+  width: 100%;
+  z-index: 1;
+
+  border-bottom: $black-border;
+  border-left: $black-border;
+  border-right: $black-border;
+}
+
+%tk-dropdown__list--is-focused {
+  display: block;
+}
+

@@ -1,11 +1,18 @@
-%tk-field-label {
-  color: $gray-4;
+%tk-field__label-as-placeholder {
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+%tk-field__label {
+  @extend %tk-field__label-as-placeholder;
+
+  margin-left: 10px;
+  margin-top: 14px;
   cursor: text;
+  color: $gray-55;
   font-size: $font-size-medium;
   font-weight: 300;
-  left: 10px;
-  position: absolute;
-  top: 14px;
   transition: all 0.2s ease-out;
 
   // Firefox doesn't support (:placeholder-shown) at the moment
@@ -16,35 +23,29 @@
     color: $black;
     font-size: $font-size-xsmall;
     font-weight: 500;
-    top: 6px;
+    margin-top: 6px;
   }
+
 }
 
-/* States */
-%tk-field-label--is-filled {
-  @extend %tk-field-label;
+%tk-field__label--small {
   font-size: $font-size-xsmall;
   font-weight: 500;
-  top: 6px;
+  margin-top: 6px;
 }
 
-%tk-field-label--is-focused {
-  @extend %tk-field-label--is-filled;
+%tk-field__label--is-focused {
   color: $black;
 }
 
-%tk-field-label--is-disabled {
-  @extend %tk-field-label;
-  color: $gray-3;
-  text-decoration: line-through;
+%tk-field__label--for-textarea {
+  @extend %tk-field__label-as-placeholder;
+  @extend %tk-field__label--small;
+  margin-left: 10px;
+  margin-top: 10px;
 }
 
-%tk-field-label--for-textarea {
-  @extend %tk-field-label;
-  font-size: $spacer-x;
-  font-weight: 500;
-  left: 0;
-  top: 0;
-  padding-left: 10px;
-  padding-top: 10px;
+%tk-field__label--is-disabled {
+  color: $gray-3;
+  text-decoration: line-through;
 }

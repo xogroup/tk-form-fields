@@ -1,39 +1,32 @@
-%tk-field-container {
+%tk-field__container {
   position: relative;
 
-  .tk-form-fields__field-requirements {
-    @extend %tk-field-requirements;
-  }
-
   label {
-    @extend %tk-field-label;
+    @extend %tk-field__label;
   }
 
   input {
     @extend %tk-field;
 
-    &:not(:focus):not(:placeholder-shown) ~ label {
-      @extend %tk-field-label--is-filled;
-    }
-
     &:not(:placeholder-shown) ~ label {
-      @extend %tk-field-label--is-filled;
+      @extend %tk-field__label--small;
     }
 
     &:focus ~ label {
-      @extend %tk-field-label--is-focused;
+      @extend %tk-field__label--small;
+      @extend %tk-field__label--is-focused;
     }
 
-    &.tk-form-fields__field--invalid {
+    &.tk-field--invalid {
       @extend %tk-field--is-invalid;
 
-      ~ .tk-form-fields__field-requirements {
-        @extend %tk-field-requirements--is-shown;
+      ~ .tk-field__requirements {
+        @extend %tk-field__requirements--field-is-invalid;
       }
     }
 
     &:disabled ~ label {
-      @extend %tk-field-label--is-disabled;
+      @extend %tk-field__label--is-disabled;
     }
   }
 }

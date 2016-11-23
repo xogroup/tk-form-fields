@@ -22,12 +22,6 @@ exports.isInitialized = function IsInitialized(formElement) {
   return formElement.dataset.tkFormInitialized === true;
 };
 
-exports.forElement = function forElement(element, formSelector) {
-  return find(document.body.querySelectorAll(formSelector), function (form) {
-    return form.contains(element);
-  });
-}
-
 function bindOnSubmitValidation(form) {
   form.addEventListener('submit', function (e) {
     if(!e.target.checkValidity()) {
@@ -38,7 +32,7 @@ function bindOnSubmitValidation(form) {
 
 function bindReplaceDefaultBubble(field) {
   field.addEventListener('invalid', function (e) {
-    e.target.classList.add('tk-form-fields__field--invalid');
+    e.target.classList.add('tk-field--invalid');
     e.preventDefault();
   });
 }
@@ -46,7 +40,7 @@ function bindReplaceDefaultBubble(field) {
 function bindValidationTrigger(field) {
   field.addEventListener('blur', function (e) {
     if (e.target.checkValidity()) {
-      e.target.classList.remove('tk-form-fields__field--invalid');
+      e.target.classList.remove('tk-field--invalid');
     }
   });
 }

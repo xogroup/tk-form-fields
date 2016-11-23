@@ -1,15 +1,15 @@
-%tk-textarea-container {
+%tk-textarea__container {
   position: relative;
 
   label {
-    @extend %tk-field-label--for-textarea;
-  }
-
-  label + textarea {
-    padding: 26px $spacer-x 1px;
+    @extend %tk-field__label--for-textarea;
   }
 
   textarea {
     @extend %tk-textarea;
+  }
+
+  label + textarea {
+    @extend %tk-textarea--with-label;
   }
 }

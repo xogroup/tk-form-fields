@@ -1,4 +1,4 @@
-%tk-field-requirements {
+%tk-field__requirements {
   background-color: $coral-tint-30;
   color: $white;
   font-size: $font-size-small;
@@ -9,7 +9,7 @@
   transition: all 0.2s ease-out 1.5s;
 }
 
-%tk-field-requirements--is-shown {
+%tk-field__requirements--field-is-invalid {
   max-height: 200px;
   padding: 5px $spacer-x 4px;
 }
