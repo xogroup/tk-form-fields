@@ -119,10 +119,10 @@ html
 
             .row
               fieldset.col-xs-12.tk-field__group
-                .tk-dropdown
-                  .tk-dropdown__field
-                    .tk-dropdown__placeholder Season
-                    span.tk-dropdown__caret
+                .tk-dropdown__container
+                  input(id="season" readonly="true" placeholder=" " name="season")
+                  label(for="season") Season
+                  span.tk-dropdown__caret
                   .tk-dropdown__list-container
                     ul.tk-dropdown__list#season(type='select', name='Season' role="dropdown")
                       li.tk-dropdown__item--is-focused(data-value="Winter") Winter

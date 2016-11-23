@@ -10,17 +10,6 @@
 
   margin-left: 10px;
   margin-top: 14px;
-
-  // Firefox doesn't support (:placeholder-shown) at the moment
-  @-moz-document url-prefix() {
-    // This is the same as %tk-field-label--is-focused
-    // Extending doesn't workin the queries
-    // @extend %tk-field-label--is-focused
-    color: $black;
-    font-size: $font-size-xsmall;
-    font-weight: 500;
-    margin-top: 6px;
-  }
 }
 
 %tk-field-label--is-filled {

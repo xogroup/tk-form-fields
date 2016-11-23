@@ -12,10 +12,6 @@
   input {
     @extend %tk-field;
 
-    &:not(:focus):not(:placeholder-shown) ~ label {
-      @extend %tk-abstract-placeholder--is-filled;
-    }
-
     &:not(:placeholder-shown) ~ label {
       @extend %tk-field-label--is-filled;
     }
