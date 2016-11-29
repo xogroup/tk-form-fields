@@ -1,5 +1,7 @@
 %tk-field__container {
   position: relative;
+  font-family: $sans-serif;
+  text-align: left;
 
   label {
     @extend %tk-field__label;

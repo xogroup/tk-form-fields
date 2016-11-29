@@ -4,7 +4,10 @@ var delegate = require('./delegate');
 var findParent = require('./find-parent');
 
 exports.VERSION = PACKAGE_VERSION;
+
 exports.init = function init(formSelector) {
+  formSelector = formSelector || 'form';
+
   var delegatedSelectors = [
     formSelector + ' input',
     formSelector + ' textarea',

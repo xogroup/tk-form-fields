@@ -17,6 +17,7 @@
 %tk-dropdown__list-item--is-focused {
   background-color: $gray-90;
   color: $black;
+  font-weight: 500;
 
   %tk-dropdown__item__check {
     display: inline-block;
