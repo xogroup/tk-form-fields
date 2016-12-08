@@ -11,7 +11,8 @@
     "start": "node index.js",
     "test": "./test.sh",
     "unit-test": "./node_modules/.bin/karma start --browsers PhantomJS",
-    "test-all": "npm test && npm run unit-test"
+    "test-all": "npm test && npm run unit-test",
+    "open": "open http://localhost:9494"
   },
   "repository": {
     "type": "git",
