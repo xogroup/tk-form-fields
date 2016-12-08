@@ -1,6 +1,6 @@
 {
   "name": "@xogroup/tk-form-fields-pattern",
-  "version": "3.0.0-1",
+  "version": "3.0.0-2",
   "description": "This is HTML and styles to render the form fields pattern, as designed by Silvia",
   "main": "dist/index.js",
   "scripts": {
