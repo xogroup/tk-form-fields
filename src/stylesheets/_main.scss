@@ -1,0 +1,48 @@
+/* These are the main exported classes */
+%tk-form-fields {
+  .tk-dropdown__list-container {
+    @extend %tk-dropdown__list-container;
+  }
+
+  .tk-dropdown__list {
+    @extend %tk-dropdown__list;
+  }
+
+  .tk-dropdown__item {
+    @extend %tk-dropdown__list-item--default;
+  }
+
+  .tk-dropdown__item--is-focused {
+    @extend %tk-dropdown__list-item--is-focused;
+  }
+
+  .tk-dropdown__item__check {
+    @extend %tk-dropdown__item__check;
+  }
+
+  .tk-dropdown__caret {
+    @extend %tk-dropdown__caret--is-not-focused;
+  }
+
+  .tk-dropdown__container {
+    @extend %tk-dropdown__container;
+  }
+
+  .tk-textarea__container {
+    @extend %tk-textarea__container;
+  }
+
+  .tk-field__container {
+    /* Some additional classes are defined in %tk-field-container */
+    @extend %tk-field__container;
+  }
+
+  .tk-field__requirements {
+    @extend %tk-field__requirements;
+  }
+
+  .tk-field__group {
+    @extend %tk-field__group;
+  }
+}
+

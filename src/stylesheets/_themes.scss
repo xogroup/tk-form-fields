@@ -1,0 +1,15 @@
+%tk-form-fields--default {
+  @extend %tk-form-fields;
+  @include tk-form-fields-theme(
+    $base-color: $gray-2,
+    $accent-color: $gray-90
+  );
+}
+
+%tk-form-fields--white {
+  @extend %tk-form-fields;
+  @include tk-form-fields-theme(
+    $base-color: $white,
+    $accent-color: $gray-95
+  );
+}

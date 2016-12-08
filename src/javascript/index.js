@@ -1,15 +1,27 @@
+var dropdown = require('./dropdown');
 var form = require('./form');
 var delegate = require('./delegate');
+var findParent = require('./find-parent');
 
 exports.VERSION = PACKAGE_VERSION;
-exports.init = function init() {
-  var delegatedSelectors = '.tk-form-fields input, .tk-form-fields textarea, .tk-form-fields button';
 
-  delegate(document.body, 'click', delegatedSelectors, initializerHandler);
+exports.init = function init(formSelector) {
+  formSelector = formSelector || 'form';
+
+  var delegatedSelectors = [
+    formSelector + ' input',
+    formSelector + ' textarea',
+    formSelector + ' button'
+  ].join(',');
+
+  delegate(document.body, 'click', delegatedSelectors, generateInitializerHandler(formSelector));
+  dropdown.initialize(formSelector);
 };
 
 exports.initializeForm = form.initialize;
 
-function initializerHandler(event) {
-  form.initialize(form.forElement(event.target));
-};
+function generateInitializerHandler(formSelector) {
+  return function initializerHandler(event) {
+    form.initialize(findParent(event.target, formSelector));
+  };
+}

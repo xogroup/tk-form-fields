@@ -1,0 +1,26 @@
+%tk-dropdown__container {
+  @extend %tk-field__container;
+
+  input {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    cursor: default;
+
+    color: transparent;
+    text-shadow: 0 0 0 black;
+
+    &:focus {
+      ~ %tk-dropdown__caret--is-not-focused {
+        @extend %tk-dropdown__caret--is-focused;
+      }
+
+      ~ * %tk-dropdown__list {
+        @extend %tk-dropdown__list--is-focused;
+      }
+    }
+  }
+}

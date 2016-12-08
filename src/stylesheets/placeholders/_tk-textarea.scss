@@ -1,0 +1,36 @@
+%tk-textarea {
+  -webkit-appearance: none;
+  border: $gray-2-border;
+  border-radius: $radius-reset;
+  color: $black;
+  font-size: $font-size-medium;
+  font-weight: 400;
+  outline: $outline-reset;
+  padding: 14px $spacer-x 4px;
+  resize: none;
+  width: 100%;
+
+  &:focus {
+    @extend %tk-field--is-focused;
+  }
+
+  &:hover {
+    @extend %tk-field--is-focused;
+  }
+
+  &::-moz-placeholder,
+  &::-ms-input-placeholder,
+  &::-webkit-input-placeholder {
+    @extend %tk-textarea__placeholder;
+  }
+}
+
+%tk-textarea--with-label {
+  padding: 26px $spacer-x 1px;
+}
+
+%tk-textarea__placeholder {
+  color: $gray-55;
+  font-size: $font-size-medium;
+  font-weight: 300;
+}
