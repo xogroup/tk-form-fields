@@ -1,0 +1,25 @@
+{
+  "name": "@union/field-styles",
+  "version": "1.0.0",
+  "description": "",
+  "main": "dist/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "webpack",
+    "start": "webpack --watch"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "css-loader": "^0.26.1",
+    "sass-loader": "^4.0.2",
+    "style-loader": "^0.13.1",
+    "webpack": "^1.14.0"
+  },
+  "dependencies": {
+    "@sharedweb/tk-colors": "^1.0.1",
+    "@sharedweb/tk-typography": "^2.0.0-0",
+    "bootstrap-sass": "^3.3.7"
+  }
+}
