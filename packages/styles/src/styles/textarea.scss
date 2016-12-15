@@ -1,0 +1,28 @@
+:local(.textarea) {
+  composes: field-base;
+
+  outline: $outline-reset;
+  border-radius: $radius-reset;
+  color: $black;
+  resize: none;
+
+  &::-moz-placeholder,
+  &::-ms-input-placeholder,
+  &::-webkit-input-placeholder {
+    color: $gray-55;
+    font-size: $font-size-medium;
+    font-weight: 300;
+  }
+}
+
+:local(.textarea-without-label) {
+  composes: textarea;
+
+  padding: 14px $spacer-x 4px;
+}
+
+:local(.textarea-with-label) {
+  composes: textarea;
+
+  padding: 26px $spacer-x 1px;
+}

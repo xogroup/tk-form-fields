@@ -6,7 +6,8 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "webpack",
-    "start": "webpack --watch"
+    "start": "webpack --watch",
+    "build-css": "node ./scripts/print-css.js > demo/build/index.css"
   },
   "author": "",
   "license": "ISC",

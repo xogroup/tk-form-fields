@@ -14,6 +14,7 @@ module.exports = {
   },
   plugins: [
     new HTMLWebpackPlugin({
+      template: path.resolve(__dirname, 'demo', 'src', 'index.html'),
       filename: path.resolve(__dirname, 'demo', 'build', 'index.html'),
       chunks: ['demo']
     })

@@ -19,7 +19,7 @@ export default function Field({
   return (
     <div className={styles.container}>
       <input className={inputClass} id={id} name={name} {...props} placeholder=" " />
-      <label className={styles.label} htmlFor={id} > { label } </label>
+      <label className={styles.fieldLabel} htmlFor={id} > { label } </label>
       <div className={styles.requirements}>{validationMessage}</div>
     </div>
   );

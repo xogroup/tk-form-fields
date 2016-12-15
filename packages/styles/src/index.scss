@@ -1,9 +1,20 @@
+/* Variables , mixins, and placeholders */
 @import '~@sharedweb/tk-colors/colors';
 @import '~bootstrap-sass/assets/stylesheets/bootstrap/mixins';
 @import '~styles/variables';
-@import '~styles/Container';
-@import '~styles/Label';
-@import '~styles/Field';
-@import '~styles/Requirements';
-@import '~styles/Group';
+@import '~styles/placeholders/label';
+
+@import '~styles/container';
+
+@import '~styles/label';
+@import '~styles/field-label';
+
+@import '~styles/field-base';
+@import '~styles/field';
+
+@import '~styles/textarea';
+@import '~styles/textarea-label';
+
+@import '~styles/requirements';
+@import '~styles/group';
 

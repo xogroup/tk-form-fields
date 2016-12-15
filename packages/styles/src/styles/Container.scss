@@ -2,4 +2,8 @@
   composes: sans-serif text-left from '@sharedweb/tk-typography';
 
   position: relative;
+
+  * {
+    box-sizing: border-box;
+  }
 }
