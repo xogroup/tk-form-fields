@@ -2,13 +2,21 @@ import React from 'react';
 import humanize from 'humanize-string';
 import { locals as styles } from '@union/field-styles';
 
-export default function Textarea({ name, label = humanize(name), ...props }) {
+export function Textarea({ name, label = humanize(name), ...props }) {
   const id = name + Date.now();
 
   return (
     <div className={styles.container}>
-      <textarea className={styles.textareaWithLabel} id={id} {...props}/>
+      <textarea className={styles.textareaWithLabel} id={id} name={name} {...props}/>
       <label className={styles.textareaLabel} htmlFor={id}>{ label }</label>
+    </div>
+  )
+}
+
+export function TextareaWithoutLabel(props) {
+  return (
+    <div className={styles.container}>
+      <textarea className={styles.textareaWithoutLabel} {...props}/>
     </div>
   )
 }

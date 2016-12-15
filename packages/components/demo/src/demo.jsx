@@ -1,5 +1,5 @@
 import React from 'react';
-import { Field, Group, Textarea } from 'components';
+import { Field, Group, Textarea, TextareaWithoutLabel } from 'components';
 
 export default function Demo() {
   return (
@@ -22,6 +22,10 @@ export default function Demo() {
 
       <Group>
         <Textarea name="textarea-1" />
+      </Group>
+
+      <Group>
+        <TextareaWithoutLabel name="textarea-1" placeholder="A really long note" />
       </Group>
     </div>
   )
