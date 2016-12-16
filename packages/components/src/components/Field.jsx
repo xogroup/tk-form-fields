@@ -17,7 +17,7 @@ export default function Field({
   }
 
   return (
-    <div className={styles.container}>
+    <div className={styles.fieldContainer}>
       <input className={inputClass} id={id} name={name} {...props} placeholder=" " />
       <label className={styles.fieldLabel} htmlFor={id} > { label } </label>
       <div className={styles.requirements}>{validationMessage}</div>

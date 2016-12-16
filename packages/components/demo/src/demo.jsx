@@ -1,5 +1,12 @@
 import React from 'react';
-import { Field, Group, Textarea, TextareaWithoutLabel } from 'components';
+import {
+  Field,
+  Group,
+  Textarea,
+  TextareaWithoutLabel,
+  Dropdown,
+  DropdownItem
+} from 'components';
 
 export default function Demo() {
   return (
@@ -21,11 +28,18 @@ export default function Demo() {
       </Group>
 
       <Group>
-        <Textarea name="textarea-1" />
+        <Textarea name="textarea-1" defaultValue="Hello there" />
       </Group>
 
       <Group>
         <TextareaWithoutLabel name="textarea-1" placeholder="A really long note" />
+      </Group>
+
+      <Group>
+        <Dropdown name="dropdown" value="test-1">
+          <DropdownItem label="test" />
+          <DropdownItem label="test-1" />
+        </Dropdown>
       </Group>
     </div>
   )

@@ -1,0 +1,39 @@
+:local(.dropdown-item) {
+  padding: 10px;
+  font-size: $font-size-medium;
+  cursor: pointer;
+  position: relative;
+  color: $gray-55;
+
+  &:hover {
+    color: $black;
+  }
+}
+
+:local(.dropdown-field):focus ~ * :local(.dropdown-list) {
+  display: block;
+}
+
+:local(.dropdown-item-is-focused) {
+  composes: dropdown-item;
+
+  background-color: $gray-90;
+  color: $black;
+  font-weight: 500;
+
+  :local(.dropdown-item-check) {
+    display: inline-block;
+  }
+}
+
+:local(.dropdown-item-check) {
+  // @extend .icon;
+  // @extend .icon-general-checkmark-selected-state;
+
+  display: none;
+  position: absolute;
+  right: 0;
+  top: 0;
+  margin: 15px;
+  font-size: 10px;
+}
