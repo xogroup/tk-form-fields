@@ -25,15 +25,3 @@
     display: inline-block;
   }
 }
-
-:local(.dropdown-item-check) {
-  // @extend .icon;
-  // @extend .icon-general-checkmark-selected-state;
-
-  display: none;
-  position: absolute;
-  right: 0;
-  top: 0;
-  margin: 15px;
-  font-size: 10px;
-}

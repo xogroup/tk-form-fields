@@ -1,5 +1,5 @@
 import React from 'react';
-import { locals as styles } from '@union/field-styles';
+import styles from '@union/field-styles';
 
 export default function Group({ children, ...props }) {
   return (

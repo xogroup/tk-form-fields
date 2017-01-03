@@ -1,19 +1,14 @@
 const path = require('path');
 const v = require('./package.json').version.replace(/\./g, '_');
+const webpack = require('webpack');
 
 const cssQuery = {
-  // camelCase: Camelize identifier when loaded in JS
-  // localIdentName: Format for unique CSS class names
-  //    local - Actual name assigned to local in CSS file
-  //    hash - Hash for uniqueness
-  // importLoaders: Allow any icss compatible module to be loaded
-  importLoaders: false,
-  camelCase: true,
-  localIdentName: `ff-${v}--[hash:3]__[local]`
+  camelize: true,
+  scopedNameFormat: `ff-${v}--[hash:3]__[local]`
 }
 
 module.exports = {
-  entry: './src/styles.js',
+  entry: './src/index.scss',
   output: {
     filename: 'index.js',
     path: path.join(__dirname, 'dist'),
@@ -30,12 +25,17 @@ module.exports = {
       path.resolve(__dirname, 'src')
     ]
   },
+  externals: {
+    "@sharedweb/tk-typography": true,
+    "@sharedweb/tk-icons": true,
+    "css-module-builder": true,
+  },
   module: {
     loaders: [
       {
         test: /\.s?css$/,
         loaders: [
-          'css-loader?' + JSON.stringify(cssQuery),
+          'a-css-loader?' + JSON.stringify(cssQuery),
           'sass-loader'
         ]
       }

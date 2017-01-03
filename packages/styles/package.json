@@ -12,7 +12,10 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "a-css-loader": "^1.0.0-beta.4",
     "css-loader": "^0.26.1",
+    "cssnano-loader": "^0.1.2",
+    "node-sass": "^4.1.1",
     "sass-loader": "^4.0.2",
     "style-loader": "^0.13.1",
     "webpack": "^1.14.0"
