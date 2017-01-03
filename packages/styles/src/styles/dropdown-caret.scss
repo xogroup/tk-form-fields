@@ -1,0 +1,21 @@
+@value ( caret-up, caret-down ) from '@sharedweb/tk-icons';
+
+:local(.dropdown-caret) {
+  composes: icon from '@sharedweb/tk-icons';
+
+  position: absolute;
+  right: 0;
+  top: 0;
+  margin-top: 15px;
+  margin-right: 10px;
+}
+
+:local(.field) {
+  &:not(:focus) ~ :local(.dropdown-caret)::before {
+    content: caret-down;
+  }
+
+  &:focus ~ :local(.dropdown-caret)::before {
+    content: caret-up;
+  }
+}

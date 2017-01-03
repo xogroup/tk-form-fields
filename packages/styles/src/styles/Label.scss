@@ -1,0 +1,15 @@
+:local(.label) {
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  cursor: text;
+
+  /* Firefox doesn't support (:placeholder-shown) at the moment */
+  @-moz-document url-prefix() {
+    color: $black;
+    font-size: $font-size-xsmall;
+    font-weight: 500;
+    margin-top: 6px;
+  }
+}
