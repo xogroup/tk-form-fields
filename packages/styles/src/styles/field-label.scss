@@ -1,0 +1,31 @@
+:local(.field-label) {
+  composes: label;
+
+  /* Should come from a font-size class from typography */
+  font-weight: 300;
+  font-size: 18px;
+
+  margin-left: 10px;
+  margin-top: 14px;
+  color: $gray-55;
+  transition: all 0.2s ease-out;
+}
+
+:local(.field) {
+  &:not(:placeholder-shown) ~ :local(.field-label),
+  &:focus ~ :local(.field-label) {
+    @extend %label--small;
+
+    margin-top: 6px;
+  }
+
+  &:disabled ~ :local(.field-label) {
+    color: $gray-3;
+    text-decoration: line-through;
+  }
+
+  &:focus ~ :local(.field-label) {
+    color: $black;
+  }
+}
+

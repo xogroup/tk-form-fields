@@ -1,0 +1,13 @@
+:local(.field) {
+  composes: field-base;
+  padding: 20px $spacer-x 4px $spacer-x;
+}
+
+:local(.invalid-field) {
+  composes: field;
+
+  background: $coral-tint-80;
+  border: $coral-tint-80-border;
+  transition: all 0.2s ease-out 1.5s;
+}
+

@@ -1,6 +1,6 @@
 {
   "name": "@xogroup/tk-form-fields-pattern",
-  "version": "2.0.0",
+  "version": "3.0.0-2",
   "description": "This is HTML and styles to render the form fields pattern, as designed by Silvia",
   "main": "dist/index.js",
   "scripts": {
@@ -11,7 +11,8 @@
     "start": "node index.js",
     "test": "./test.sh",
     "unit-test": "./node_modules/.bin/karma start --browsers PhantomJS",
-    "test-all": "npm test && npm run unit-test"
+    "test-all": "npm test && npm run unit-test",
+    "open": "open http://localhost:9494"
   },
   "repository": {
     "type": "git",
@@ -24,6 +25,8 @@
   },
   "homepage": "https://github.com/xogroup/tk-form-fields#readme",
   "devDependencies": {
+    "@sharedweb/tk-buttons": "2.0.0-3",
+    "@sharedweb/tk-typography": "2.0.0-0",
     "babel-eslint": "^6.1.2",
     "clean-css": "^3.4.18",
     "eslint": "^3.1.0",
@@ -60,7 +63,7 @@
   "dependencies": {
     "@sharedweb/tk-colors": "^1.0.1",
     "@sharedweb/tk-core-styles": "^1.2.5",
-    "@sharedweb/tk-typography": "^1.1.2",
+    "@sharedweb/tk-icons": "^1.1.0",
     "array-find": "git+https://github.com/xogroup/array-find.git",
     "bootstrap-sass": "^3.3.7",
     "matches-selector-polyfill": "^1.0.0"

@@ -1,0 +1,8 @@
+:local(.textarea-label) {
+  composes: label;
+
+  @extend %label--small;
+
+  margin-left: 10px;
+  margin-top: 10px;
+}

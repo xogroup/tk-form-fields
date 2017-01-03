@@ -1,0 +1,37 @@
+%tk-dropdown__list-item {
+  padding: 10px;
+  font-size: $font-size-medium;
+  cursor: pointer;
+  position: relative;
+}
+
+%tk-dropdown__list-item--default {
+  @extend %tk-dropdown__list-item;
+  color: $gray-55;
+
+  &:hover {
+    color: $black;
+  }
+}
+
+%tk-dropdown__list-item--is-focused {
+  background-color: $gray-90;
+  color: $black;
+  font-weight: 500;
+
+  %tk-dropdown__item__check {
+    display: inline-block;
+  }
+}
+
+%tk-dropdown__item__check {
+  @extend .icon;
+  @extend .icon-general-checkmark-selected-state;
+
+  display: none;
+  position: absolute;
+  right: 0;
+  top: 0;
+  margin: 15px;
+  font-size: 10px;
+}

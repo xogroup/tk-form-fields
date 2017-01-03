@@ -1,5 +1,6 @@
 @charset "utf-8";
 @import "variables";
+@import "@sharedweb/tk-buttons/dist/latest/tk-buttons";
 
 body {
   background: $white;
@@ -20,5 +21,21 @@ h2 a {
 
   &:hover {
     border: $border-reset;
+  }
+}
+
+.white-form-example {
+  background-color: $lilac-tint-80;
+  .form-demo {
+    @extend %tk-form-fields--white;
+    @extend %tk-buttons;
+  }
+}
+
+.default-form-example {
+  background-color: $white;
+  .form-demo {
+    @extend %tk-form-fields--default;
+    @extend %tk-buttons;
   }
 }

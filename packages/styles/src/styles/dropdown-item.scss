@@ -1,0 +1,27 @@
+:local(.dropdown-item) {
+  padding: 10px;
+  font-size: $font-size-medium;
+  cursor: pointer;
+  position: relative;
+  color: $gray-55;
+
+  &:hover {
+    color: $black;
+  }
+}
+
+:local(.dropdown-field):focus ~ * :local(.dropdown-list) {
+  display: block;
+}
+
+:local(.dropdown-item-is-focused) {
+  composes: dropdown-item;
+
+  background-color: $gray-90;
+  color: $black;
+  font-weight: 500;
+
+  :local(.dropdown-item-check) {
+    display: inline-block;
+  }
+}

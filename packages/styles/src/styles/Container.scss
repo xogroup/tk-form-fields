@@ -1,0 +1,12 @@
+:local(.container) {
+  position: relative;
+}
+
+:local(.field-container) {
+  composes: sans-serif text-left from '@sharedweb/tk-typography';
+  composes: container;
+
+  * {
+    box-sizing: border-box;
+  }
+}

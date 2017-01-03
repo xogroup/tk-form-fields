@@ -1,0 +1,19 @@
+%tk-dropdown__caret {
+  @extend .icon;
+
+  position: absolute;
+  right: 0;
+  top: 0;
+  margin-top: 15px;
+  margin-right: 10px;
+}
+
+%tk-dropdown__caret--is-not-focused {
+  @extend %tk-dropdown__caret;
+  @extend .icon-general-caret-down;
+}
+
+%tk-dropdown__caret--is-focused {
+  @extend %tk-dropdown__caret;
+  @extend .icon-general-caret-up;
+}
